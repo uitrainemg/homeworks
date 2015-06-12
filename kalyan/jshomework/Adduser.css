@@ -1,0 +1,44 @@
+            a{
+                color:black;
+                font-size: 15px;
+
+            }
+            a:link{
+                text-decoration: none;
+            }
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: blue;
+                text-decoration: none;
+            }
+
+            th{
+                background-color: rgb(51, 117, 214);
+            }
+            
+            body {     
+                height: 1000px;
+                
+                background: linear-gradient(to bottom, rgb(228, 255, 255), rgb(92, 133, 255)); /* Standard syntax (must be last) */
+            }
+           
+            table.altcolor tr:nth-of-type(even) {
+             background-color:rgb(162,224,158);
+            }
+
+            .button{
+                background-color: #E3E1B8; 
+                border-radius: 10px;
+                padding: 2px 4px;
+                font: 13px sans-serif;
+                text-decoration:blink;
+                border: 3px solid ;
+                border-color: #aaa #444 #444 #aaa;
+                color: #000;
+
+            }
+            
+            option{background-color: rgb(228, 255, 255); font-weight: bold; font-size: 12px;}      

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Rows</title>
+    <link rel="stylesheet" type="text/css" href="Adduser.css">
+    <script type="text/javascript" src="../js/adduser.js"></script>
+
+    </head>
+<body>
+<form>
+<div align="center">
+<table>
+    <tr>
+        <td>FirstName</td> 
+        <td><input type="text" id="fname">
+
+    </tr>
+    <tr>
+        <td>LastName</td>
+        <td><input type="text" id="lname">
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+        <select class="dropdown" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Frequent Flyer Number</td>
+        <td><input type="text" id="ffn"></td>
+    </tr>
+    <tr>
+        <td>Date Of Birth</td>
+        <td><input type="date" id="myDate"></td>
+    </tr>
+    <tr>
+        <td>Food Preference</td>
+        <td>
+        <select class="dropdown" id="fp">
+            <option>Vegan</option>
+            <option>Veg</option>
+            <option>Meat</option>
+            <option>Kosher</option>
+        </select>
+        </td>       
+    <tr>
+            <td>Country</td>
+            <td>
+            <!--<select id="country" onchange="countryChange(this);">-->
+            <!--<select id="country">-->
+            <select onchange="countryChange(this);" id="country">
+            <option value="empty">Select Country</option>
+            <option value="USA">USA</option>
+            <option value="CANADA">CANADA</option>
+            </select>
+            </td>
+    </tr>    
+    
+    <tr>
+            <td>State</td>
+            <td>
+            <!--<select id="state">-->
+            <select id="state">
+            <!--<option>PA</option>
+            <option>CA</option>-->
+            <option value="0">State</option>
+            </select>
+            </td>     
+    </tr>
+    <tr>
+            <td>Zipcode/Postalcode</td>
+            <td><input type="text" id="zipcode" onkeypress="return isNumberKey(event)"></td>
+    </tr>
+
+    <tr>
+             <td><input type="button" class="button" value="ADD" id="addDisable" onclick="addRow()"></td>
+             <td><input type="button" class="button" disabled value="DELETE" id="btnSubmit" onclick="deleteRow()"></td>
+             <td><input type="button" class="button" value="UPDATE" onclick="updateRow()"></td>
+    </tr>       
+
+
+</table>
+<input type="hidden" id="updatingRowId"/>
+</div>
+</form>
+
+<div align="center">
+    <table class="altcolor" id="myTableData"  border="1" cellpadding="2">
+        <tr>
+            <th>Check</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Gender</th>
+            <th>Frequent Flyer Number</th>
+            <th>Date of Birth</th>
+            <th>Food Preference</th>
+            <!--<th>Country</th>
+            <th>State</th>
+            <th>Zipcode/Postalcode</th> -->
+            <th>Edit</th>
+        </tr>
+    </table><br/>
+</div>
+
+
+</body>
+</html>
