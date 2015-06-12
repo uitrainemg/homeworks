@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+	function getStates()
+	{
+		var xmlhttp = new XMLHttpRequest();
+		var url = "http://localhost:3000/getStates?country="+document.getElementById('country').value;
+		xmlhttp.onreadystatechange = function(){
+			 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			 	var statesArray = JSON.parse(xmlhttp.responseText);
+			 	var stateCombo = document.getElementById('states');
+			 	for(var i=stateCombo.options.length;i>0;i--)
+				{
+			 		stateCombo.remove(i);
+			 	}
+			 	for(var i=0;i<statesArray.length;i++)
+				{
+		 				stateCombo.options[i] = new Option(statesArray[i].name, statesArray[i].abbreviation);
+				}
+			 }
+			};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+}
+</script>
+</head>
+<body onload="getStates()">
+<label>Country</label>
+<select id="country" onchange='getStates()'>
+	<option value="usa">United States</option>
+	<option value="canada">Canada</option>
+</select> <br/><br/>
+<label>States</label>
+<select id="states"></select>
+
+</body>
+</html>
