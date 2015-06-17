@@ -20,20 +20,53 @@
 		 				stateCombo.options[i] = new Option(statesArray[i].name, statesArray[i].abbreviation);
 				}
 			 }
+			 else
+			 {
+			 	var stateCombo = document.getElementById('states');
+			 	stateCombo.options[0] = new Option('No States available right now', 'NA');
+			 }
+			};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+}
+function getCities()
+	{
+		var xmlhttp = new XMLHttpRequest();
+		var url = "http://localhost:3000/getCities?state="+document.getElementById('states').value;
+		xmlhttp.onreadystatechange = function(){
+			 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			 	var citiesArray = JSON.parse(xmlhttp.responseText);
+			 	var cityCombo = document.getElementById('cities');
+			 	for(var i=cityCombo.options.length;i>0;i--)
+				{
+			 		cityCombo.remove(i);
+			 	}
+			 	for(var i=0;i<citiesArray.length;i++)
+				{
+		 				cityCombo.options[i] = new Option(citiesArray[i].name, citiesArray[i].name);
+				}
+			 }
+			 else
+			 {
+			 	var cityCombo = document.getElementById('cities');
+			 	cityCombo.options[0] = new Option('No cities available right now', 'NA');
+			 }
 			};
 		xmlhttp.open("GET", url, true);
 		xmlhttp.send();
 }
 </script>
 </head>
-<body onload="getStates()">
+<body onload="getStates();getCities();">
 <label>Country</label>
 <select id="country" onchange='getStates()'>
 	<option value="usa">United States</option>
 	<option value="canada">Canada</option>
 </select> <br/><br/>
 <label>States</label>
-<select id="states"></select>
+<select id="states" onchange="getCities()"></select><br/><br/>
+<label>Cities</label>
+<select id="cities"></select>
 
 </body>
 </html>
