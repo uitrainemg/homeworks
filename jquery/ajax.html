@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script>
+	$(document).ready(function(){
+	$( "#country" ).change(function()
+	{
+	  $.ajax({
+        url: "http://localhost:3000/getStates?country="+document.getElementById('country').value,
+        dataType: 'json',
+        data: {
+            name : "The name",
+            desc : "The description"
+        }
+    })
+    .done (function(data) {  
+			 	var statesArray = data;
+			 	var stateCombo = document.getElementById('states');
+			 	for(var i=stateCombo.options.length;i>=0;i--)
+				{
+			 		stateCombo.remove(i);
+			 	}
+			 	for(var i=0;i<statesArray.length;i++)
+				{
+		 				stateCombo.options[i] = new Option(statesArray[i].name, statesArray[i].abbreviation);
+				}
+			 })
+    .fail   (function()  { var stateCombo = document.getElementById('states');
+			 	stateCombo.options[0] = new Option('No States available right now', 'NA'); 
+			 });
+   
+	
+});
+$( "#states" ).change(function()
+	{
+		$.ajax({
+        url: "http://localhost:3000/getCities?state="+document.getElementById('states').value,
+        dataType: 'json',
+      }).done(function(data){
+			 	var citiesArray = data;
+			 	var cityCombo = document.getElementById('cities');
+			 	for(var i=cityCombo.options.length;i>=0;i--)
+				{
+			 		cityCombo.remove(i);
+			 	}
+			 	for(var i=0;i<citiesArray.length;i++)
+				{
+		 				cityCombo.options[i] = new Option(citiesArray[i].name, citiesArray[i].name);
+				}
+			}).fail   (function()  { 
+				var cityCombo = document.getElementById('cities');
+			 	cityCombo.options[0] = new Option('No cities available right now', 'NA');
+			 });
+});
+});
+</script>
+</head>
+<body>
+<label>Country</label>
+<select id="country">
+	<option value="usa">United States</option>
+	<option value="canada">Canada</option>
+</select> <br/><br/>
+<label>States</label>
+<select id="states"></select><br/><br/>
+<label>Cities</label>
+<select id="cities"></select>
+
+</body>
+</html>
