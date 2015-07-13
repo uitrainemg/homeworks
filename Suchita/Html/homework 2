@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<img src="continents.gif" alt="continent" usemap="#continentsmap" >
+
+<map name="continentsmap">
+  <area shape="poly" coords="200,59,184,86,210,96,215,126,224,146,246,122,256,91,235,64" href="https://en.wikipedia.org/wiki/Africa" target="_blank" alt="africa"/>
+  <area shape="poly" coords="118,92,125,128,136,169,164,115" alt="southamerica" href="https://en.wikipedia.org/wiki/South_America" target="_blank" />
+
+   <area shape="poly" coords="194,57,207,51,238,59,255,46,253,24,237,20,220,17,204,27,197,35,193,50" alt="Europe" href="https://en.wikipedia.org/wiki/Europe" target="_blank" />
+
+  <area shape="poly" coords="238,66,250,85,272,73,287,92,297,78,309,94,317,110,318,87,326,73,321,56,335,43,328,31,349,25,334,21,314,18,294,16,276,12,271,12,253,19,251,24,240,60" alt="Asia" href="https://en.wikipedia.org/wiki/Asia" target="_blank" />
+
+  <area shape="poly" coords="321,146,340,144,351,153,361,131,356,119,344,119,335,123,322,132" alt="Australia" href="https://en.wikipedia.org/wiki/Australia" target="_blank" />
+  
+  <area shape="poly" coords="92,202,95,196,111,193,133,190,146,192,152,182,156,194,182,195,195,190,215,189,239,187,251,183,257,186,281,185,297,183,318,185,330,190,309,198,308,202" alt="Antartica" href="https://en.wikipedia.org/wiki/Antarctica" target="_blank" />
+
+  <area shape="poly" coords="61,32,84,43,85,69,107,87,113,67,134,48,148,36,161,29,188,8,146,10,81,17,65,23" alt="north america" href="https://en.wikipedia.org/wiki/North_America" target="_blank">
+
+</map>
+
+</body>
+</html>
