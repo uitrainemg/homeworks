@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Rows</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="Adduser.css">-->
+    <script type="text/javascript" src="adduserjsonstatesjquery.js"></script>
+    
+    </head>
+<body>
+<form>
+<div align="center">
+<!--FirstName:<input type="text" id="fname"></br></br>
+LastName:<input type="text" id="lname"></br></br>
+Gender:<select class="dropdown" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select></br></br>
+Frequent Flyer Number:<input type="text" id="ffn"></br></br>
+Date Of Birth: <input type="date" id="myDate"></br></br>
+Food Preference:<select class="dropdown" id="fp">
+            <option>Vegan</option>
+            <option>Veg</option>
+            <option>Meat</option>
+            <option>Kosher</option>
+        </select></br></br>
+Country: <select id="country">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+            </select></br></br>
+
+State:<select id="states"></select></br></br>
+City:<select id="cities"></select></br></br> 
+Zipcode/Postalcode:<input type="text" id="zipcode" class="quantity"/></br></br>-->
+
+
+<table >
+<tbody>
+    <tr>
+        <td>FirstName</td> 
+        <td><input type="text" id="fname">
+
+    </tr>
+    <tr>
+        <td>LastName</td>
+        <td><input type="text" id="lname">
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+        <select class="dropdown" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Frequent Flyer Number</td>
+        <td><input type="text" id="ffn"></td>
+    </tr>
+    <tr>
+        <td>Date Of Birth</td>
+        <td><input type="date" id="myDate"></td>
+    </tr>
+    <tr>
+        <td>Food Preference</td>
+        <td>
+        <select class="dropdown" id="fp">
+            <option>Vegan</option>
+            <option>Veg</option>
+            <option>Meat</option>
+            <option>Kosher</option>
+        </select>
+        </td>  
+     </tr>       
+    <tr>
+            <td>Country</td>
+            <td>
+            <select id="country">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+            </select>
+            </td>
+    </tr>    
+    
+    <tr>
+            <td>State</td>
+            <td>
+            <select id="states">
+            </select>
+            </td>     
+    </tr>
+    <tr>
+            <td>City</td>
+            <td>
+            <select id="cities">
+                    
+            </select>
+
+            </td>     
+    </tr>
+    <tr>
+            <td>Zipcode/Postalcode</td>
+            <td><input type="text" id="zipcode" class="quantity"/></td>
+    </tr>
+    <tr>
+             <td><input type="button" class="button" value="ADD" id="addRow"></td>
+             <!--<td><input type="button" class="button" disabled value="DELETE" id="btnSubmit" onclick="deleteRow()"></td>-->
+             <td><input type="button" value="DELETE"  id="deleteRow"></td>
+             <td><input type="button" class="button" value="UPDATE" onclick="updateRow()"></td>
+    </tr>       
+</tbody>
+
+</table>
+<input type="hidden" id="updatingRowId"/>
+</div>
+</form>
+
+<div align="center">
+    <table class="altcolor" id="myTableData"  border="1" cellpadding="2">
+        <tr>
+            <th>Check</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Gender</th>
+            <th>Frequent Flyer Number</th>
+            <th>Date of Birth</th>
+            <th>Food Preference</th>
+            <!--<th>Country</th>
+            <th>State</th>
+            <th>Zipcode/Postalcode</th> -->
+            <th>Edit</th>
+        </tr>
+    </table><br/>
+</div>
+
+
+</body>
+</html>
