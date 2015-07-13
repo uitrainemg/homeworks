@@ -11,7 +11,10 @@ table,th,td{
 <body>
 <table>
 <h1>passengers</h1>
-
+<tr>
+<th></th>
+<td><input type="checkbox"></td>
+</tr>
 <tr>
 <th></th>
 <th>First Name</th>
