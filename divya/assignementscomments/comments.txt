@@ -1,0 +1,3 @@
+Looks good, few suggested changes:
+1. link should be present as a column in each row.
+2. I cannot access image I see  you gave absolute path of image specific to your machine.
