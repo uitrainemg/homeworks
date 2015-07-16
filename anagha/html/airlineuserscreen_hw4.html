@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Airlines</title>
+	<style type="text/css">
+	#basic{
+		float: left;
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		font-family:"Times New Roman";
+	}
+	#basicinfo{
+		float: left;
+		width: auto;
+		height: 200px;
+		background-color: lightblue;
+	}
+	
+	#main{
+		width:890px;
+		height: 900px;
+		border: 1px solid grey;
+    	padding-left: 30px;
+    	padding-right: 5px;
+    	font-family:"Times New Roman";
+    	background-color: blue;
+    	
+	}
+	#login{
+		float: left;
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		font-family: "Times New Roman";
+	}
+	#logininfo{
+		float: left;
+		width: auto;
+		height: 200px;
+		background-color:lightblue;
+	}
+
+	#contact{
+		float: left;
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		font-family: "Times New Roman";
+	}
+	#contactinfo{
+		float: left;
+		width: auto;
+		height: 200px;
+		background-color: lightblue;
+	}
+	#lang{
+		float: left;
+		width: 200px;
+		height: 200px;
+		background-color: lightblue;
+		font-family: "Times New Roman";
+	}
+	#langinfo{
+		float: left;
+		width: auto;
+		height: 200px;
+		background-color:lightblue;
+	}
+
+.propertytitle {
+    display:inline-block;
+    text-transform: uppercase;
+    width: auto;
+    padding-right: 40px;
+    font-family: "Times New Roman";
+    font-size: 12px;
+}
+.elementsetting{
+    display:inline-block;
+    width: auto;
+    padding-right:20px;
+}
+.parawrap { 
+	 font-family: "Times New Roman";
+}
+#part1{
+	display:inline-block;
+	vertical-align: top;
+	width: auto;
+}
+
+#part2{
+	display:inline-block;
+	width: auto;
+}
+.partwrap{
+	float: left;
+}
+
+.proptitle {
+    display:inline-block;
+    text-transform: uppercase;
+    width: auto;
+    padding-right: 15px;
+    margin-left: 8px;
+    font-family: "Times New Roman";
+    font-size: 12px;
+}
+.elementset{
+    display:inline-block;
+    width: auto;
+    padding-right:50px;
+
+}
+
+	</style>
+</head>
+<body>
+<h2>Personal Information</h2>
+<div id="main">
+	<div id="basic">
+		<p>Basic Info</p>
+	</div>
+	<div id="basicinfo">
+		<p>Please make sure you full name is entered exactly as it is entered in your government issued identification.</p>
+
+		<div>
+	        <label class="propertytitle">prefix</label>
+	        <label class="propertytitle">*first name</label>
+	        <label class="propertytitle">middle name</label>
+	        <label class="propertytitle">*last name</label>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="propertytitle">suffix</label>
+		</div>
+
+		<div class="elementsetting">
+			<select name="selectadd">
+				<option selected="ad">A/d</option>
+				<option>All</option>
+			</select>
+			<input type="text" name="fname" size="15">
+			<input type="text" name="mname" size="15">
+			<input type="text" name="lname" size="15">
+			<select name="selectsuffux">
+				<option selected="0">---</option>
+				<option>All</option>
+			</select>
+		</div>
+
+		<div>
+	        <label class="propertytitle">*gender</label>
+	        <label class="propertytitle">*date of birth</label>
+	        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<label class="propertytitle">known traveller number</label>
+	        <label class="propertytitle">redress number</label>
+		</div>
+
+		<div class="elementsetting">
+			<select name="selectgender">
+				<option selected="1">select one</option>
+				<option>All</option>
+			</select>
+			<select name="selectmonth">
+				<option selected="1">Month</option>
+				<option>All</option>
+			</select>
+			<select name="selectday">
+				<option selected="0">Day</option>
+				<option>All</option>
+			</select>
+			<select name="selectyear">
+				<option selected="0">Year</option>
+				<option>All</option>
+			</select>
+			<input type="text" name="tnumber" size="25">
+			 &nbsp;&nbsp;<input type="text" name="redressnumber" size="15">
+		</div>
+
+		<div class="parawrap">
+			<input type="checkbox" name="savecheck" value="savedata" checked> <span>Save my Secure flight Passenger Data</span><br/>
+			<span>Flight status tools are available on airlines' websites, at airports and other websites show the 
+			<br/>flight's published departure and arrival time, as well as the estimated or actual times.	
+			</span>
+		</div>
+
+	</div>
+
+	<div id="login">
+		Login Info
+	</div>
+
+	<div id="logininfo">
+		<div class="partwrap">
+			<div id="part1">
+		        <label class="propertytitle">*email</label>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="propertytitle">*confirm email address</label><br/>
+		        <input type="text" name="email" size="22">
+		        <input type="text" name="confirmemail" size="22"><br/>
+		        <label class="propertytitle">*password</label>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="propertytitle">*confirm password</label><br/>
+		        <input type="password" name="pwd" size="22">
+		        <input type="password" name="confirmpwd" size="22">
+		  
+			</div>
+			<div id="part2">
+				&nbsp;&nbsp;<label class="propertytitle">password requirement</label><br/>
+				<input type="checkbox" name="pass1"  checked> <span>6-20 characters</span><br/>
+				<input type="checkbox" name="pass2"  checked> <span>Not the same number email address or user</span><br/>
+				<input type="checkbox" name="pass3"  checked> <span>No special characters</span><br/>
+			</div>
+		</div>
+		<div>
+			<span><strong>Create Username</strong></span><br/>
+			<span>Username cannot contain special characters and cannot be be your email address<br/> 
+			or contain only numbers, must be unique		
+			</span><br/>
+			<span><strong>USERNAME</strong></span><br/><input type="text" name="username" size="25">
+		</div>	
+
+				
+	</div>
+
+	<div id="contact">
+		Contact Info
+	</div>
+	<div id="contactinfo">
+		<span><strong>PRIMARY MAILING ADDRESS</strong></span>
+		<div>
+	        <label class="propertytitle">*country</label>
+	        <label class="propertytitle">*address type</label>
+	        
+		</div>
+
+		<div class="elementsetting">
+			<select name="selectcountry">
+				<option selected="US">United States </option>
+				<option>All</option>
+			</select>
+			<select name="addrtype">
+				<option selected="1">Select One</option>
+				<option>All</option>
+			</select>
+		</div>
+
+		<div>
+	        <label class="propertytitle">*address line 1</label>
+	        <label class="propertytitle">*address line2</label>
+	        
+		</div>
+
+		<div class="elementsetting">
+			<input type="text" name="addr1" size="30">
+			<input type="text" name="addr2" size="30">
+		</div>
+
+		<div>
+	        <label class="proptitle">*city</label>
+	        <label class="proptitle">*state/province</label>
+	        <label class="proptitle">*postal code</label>
+	        <label class="proptitle">*area code</label>
+	        <label class="proptitle">*country code</label>
+	        <label class="proptitle">*phone number</label>
+		</div>
+
+		<div class="elementset">
+			<input type="text" name="city" size="10">
+			<select name="addrtype">
+				<option selected="1">Select One</option>
+				<option>All</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;<input type="text" name="postal" size="5">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="areacode" size="5">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="countrycode" size="5">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pnum" size="10">
+		</div>
+
+	</div>
+	<div id="lang">
+		Language Preferences
+	</div>
+	<div id="langinfo">
+			<span>Flight status tools are available on airlines' websites, at airports and other websites show the flight's time <br/>
+			published departure and arrival time, as well as the estimated or actual times.	
+			</span><br/><br/>
+			<span><strong>*LANGUAGE</strong></span><br/><select name="lang">
+				<option selected="1">English</option>
+				<option>All</option>
+			</select>
+	</div>
+</div>
+</body>
+</html>
