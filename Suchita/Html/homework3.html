@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+li {
+	float: left;
+    text-align: center;
+   }
+
+a:link, a:visited {
+    display: block;
+    width: 150px;
+    font-weight: bold;
+    color: black;
+    background-color: blue;
+   text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}   
+a:hover, a:active {
+    background-color: white;
+   
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+}
+table {
+    border-spacing: 15px;
+    width:40%;
+}
+
+</style>
+</head>
+<body>
+
+<table align="center">
+<tr>
+	<td colspan="2" style="background-color:blue;" >
+	<ul style ="margin:auto;">
+       <li><a href="file:///C:/Users/Suchita/Desktop/training/assignments/roundtrip.html" target="_blank">ROUND TRIP</a></li>
+       <li><a href="file:///C:/Users/Suchita/Desktop/training/assignments/oneway.html" target="_blank">ONE WAY</a></li>
+       <li><a href="file:///C:/Users/Suchita/Desktop/training/assignments/multicity.html" target="_blank">MULTICITY</a></li>
+   </ul>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+	<input type="text" name="PA" value="From." size="60" style="border:0;"></td>
+</tr>
+<tr>
+  <td colspan="2">
+  <input type="text" name="PA" value="To." size="60" style="border:0;"></td>
+</tr>
+<tr>
+  <td><input type="date" name="startdate" value="05/20/2015" style="border:0;"></td>
+  <td>
+    <select style="border:0;">
+      <option value="anytime">Anytime</option> 
+      <option value="Day">Day</option>
+      <option value="night">Night</option>
+   </select>
+  </td>
+</tr>
+<tr>
+	<td>
+		<input type="date" name="backdate" value="05/27/2015" style="border:0;">
+	</td>
+	<td>
+	   <select style="border:0;">
+          <option value="anytime">Anytime</option> 
+          <option value="Day">Day</option>
+          <option value="night">Night</option>
+       </select>		
+	</td>
+</tr>
+<tr>
+	<td>
+	<select style="border:0;">
+          <option value="1 Adult">1 Adult</option> 
+          <option value="2 Adult">2 Adult</option>
+          <option value="3 Adult">3 Adult</option>
+       </select>				
+	</td>
+	<td>
+		<select style="border:0;">
+          <option value="0 child">0 Child</option> 
+          <option value="1 child">1 Child</option>
+          <option value="2 Child">2 Child</option>
+       </select>		
+	</td>
+</tr>
+<tr>
+	<td>
+		<select style="border:0;">
+          <option value="0 lap infant">0 lap infant</option> 
+          <option value="1 lap infant">1 lap infant</option>
+          <option value="2 lap infant">2 lap infant</option>
+       </select>		
+	</td>
+	<td>
+		<select style="border:0;">
+          <option value="0 seat infant">0 seat infant</option> 
+          <option value="1 seat infant">1 seat infant</option>
+          <option value="2 seat infant">2 seat infant</option>
+       </select>		
+	</td>
+</tr>
+<tr>
+	<td>
+	    <select style="border:0;">
+	    	<option value="All class/cabin">All class/cabin</option>
+	    	<option value="none">None</option>
+	    </select>
+	</td>
+	<td style="border:0;">
+		<input type="checkbox" name="flexibledates">Flexible Dates
+		<input type="checkbox" name="directflight">Direct Flights<br>
+		<input type="checkbox" name="FWNP">Fares With no Penalties<br>
+		<input type="checkbox" name="NBA">Near By Airports
+	</td>
+</tr>
+<tr>
+	<td colspan="2" style="border:0">Preferred Airline</td>
+</tr>
+<tr>
+	<td colspan="2">
+	   <input type="text" name="PA1" value="1." size="60" style="border:0;">
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+		<input type="text" name="PA2" value="2." size="60" style="border:0;">
+	</td>
+</tr>
+<tr>
+	<td style="border:0"></td>
+	<td style="text-align:right ; border:0;">
+		<button type="button" name="SF" style="background-color:green;width:105px; border-radius:10px;height:30px;">Search Flight </button>
+	</td>
+</tr>
+
+</table>
+</body>
+</html>
