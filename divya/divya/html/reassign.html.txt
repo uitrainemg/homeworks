@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>passengers list</title>
+<style>
+	table,th,td{
+   		border:2px solid red;
+   		border-collapse:collapse
+		}
+	.hid{
+		display:none;
+		}
+</style>
+</head>
+<body>
+<table>
+	<h1>passengers</h1>
+<div>
+	First Name<input type="text" name:"first name"><br><br>
+	Last Name<input type="text" name="last name"><br><br>
+	DOB<input type="date" name="dob"><br><br>
+	Frequent Flyer#<input type="text" name="frequentflyer"><br><br>
+<select name="Meals">
+	<option value="Meals">Meals</option>
+	<option value="Veg">Veg</option>
+	<option value="Vegan>Vegan</option>
+	<option value="meat>Meat</option>
+	<option value="koshercountry">Kosher Country</option>
+</select><br><br>
+<select name="Country">
+	<option value="country">Country</option>
+	<option value="USA">USA</option>
+	<option value="canada">Canada</option>
+	<option value="india">India</option>
+</select><br><br>
+	State<input type="text" name="state"><br><br>
+	City<input type="text" name="city"><br><br>
+	Zipcode<input type="number" name="zipcode"><br><br>
+	<input type="submit" name="add" value="Add">
+	<input type="submit" name="Upadate" value="Update">
+	<input type="submit" name="Delete" value="Delete">
+
+</dir>
+
+<tr>
+        <th></th>
+        <th>First Name</th>
+	<th>Last Name</th>
+	<th>DOB</th>
+	<th>Frequent Flyer #</th>
+	<th>Meal Type</th>
+	<th class="hid">City</th>
+	<th class="hid">State</th>
+	<th class="hid">country</th>
+</tr
+<tr>
+	<td><input type="checkbox"></td>
+	<td>Joe</td>
+	<td>Smith</td>
+	<td>1/1/1980</td>
+	<td>AAAwz</td>
+	<td>hindu</td>
+	<td class="hid">Atlanta</td>
+	<td class="hid">GA</td>
+	<td class="hid">USA</td>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td>Clara</td>
+	<td>Jones</td>
+	<td>1/12/1987</td>
+	<td>BSHL890</td>
+	<td>meat</td>
+	<td class="hid">Jacksonville</td>
+	<td class="hid">Florida</td>
+	<td class="hid">USA</td>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td>Will</td>
+	<td>Black</td>
+	<td>2/2/1977</td>
+	<td>VKJS78</td>
+	<td>cicken</td>
+	<td class="hid">Edison</td>
+	<td class="hid">NewJersy</td>
+	<td class="hid">USA</td>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td>Michal</td>
+	<td>Renold</td>
+	<td>11/12/1999</td>
+	<td>AWDC456</td>
+	<td>veg</td>
+	<td class="hid">Denver</td>
+	<td class="hid">Colorado</td>
+	<td class="hid">USA</td>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td>Rose</td>
+	<td>Mary</td>
+	<td>12/1/2000</td>
+	<td>RDGGG340</td>
+	<td>chinnes</td>
+	<td class="hid">Dallas</td>
+	<td class="hid">Texas</td>
+	<td class="hid">USA</td>
+</tr><br>
+</table>
+
+<a href="http://www.americanairlines.com">click link</a><br><br>
+
+	First Name<input type="text" name="joe" value="Joe"><br><br>
+	Last Name<input type="text" name="smith" value="Smith"><br><br>
+	DOB<input type="date" name="dob" value=05-12-1987><br><br>
+	Frequent Flyer#<input type="text" name="frequentflyer" value="AAAwz"><br><br>
+	Meal<input type="text" name="meals" value="hindu"><br><br>
+<div class="hid">
+	City<input type="text" name="city" value="Atlanta"<br><br>
+	State<input type="text" name="state" value="GA"<br>,br>
+	Country<input type="text" name="country" value="USA"<br><br>
+</div>
+
+
+
+
+</body>

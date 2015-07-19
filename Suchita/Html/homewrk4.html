@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>personal information</title>
+	<style type="text/css">
+
+     tr td {font-size: "3";text-align: left;}
+     div{background-color: aliceblue;
+        border-style: solid;
+        border-color: deepskyblue;
+     	border-left-width: 30px ;
+     	border-right-width: 30px ; }
+     body{margin-right: 100px;
+          margin-left: 100px;}
+          ul {
+    list-style-type: disc;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+     </style>
+</head>
+	<body>
+	<div >
+		<table style="font-family:courier; border-spacing: 10px; ">
+		<tr>
+			<th style="text-align:left">PERSONAL INFO</th>
+		</tr><br>
+		<tr>
+			<td style="vertical-align:text-top";"font-weight:bold";>Basic info</td>
+			<td>Please make sure your full name is entered exactly as it appears on your goverment-issued identificatoin<br>
+			This<span style="color:blue"> Secure Flight Passenger Data</span> is for use by the<span style="color:blue"> transportation Security Administration</span> only.<br>
+			<TABLE style="border-spacing: 10px;">
+				<TR>
+					<td>PREFIX</td>
+					<TD>*FIRST NAME</TD>
+					<td>MIDDLE NAME</td>
+					<td>*LAST NAME</td>
+					<TD>SUFFIX</TD>
+				</TR>
+				<tr>
+					<td><select name="prefix">
+						<option value="Mr">Mr.</option>
+						<option value="Ms">Ms.</option>
+						<option value="Mrs">Mrs.</option>
+					</select>
+					</td>
+					<td><input type="text" name="fname"></td>
+					<td><input type="text" name="mname"></td>
+					<td><input type="text" name="lname"></td>
+					<td><select>
+						<option value="suffix">--</option>
+					</select></td>
+				</tr><br>
+				<tr>
+					<td>*GENDER</td>
+					<td>*DATE OF BIRTH</td>	
+					<td>KNOWN TRAVELER NUMBER</td>
+					<td>REDRESS NUMBER</td>
+				</tr>
+				<tr>
+					<td><select name="genders">
+						<option >Select one</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select></td>
+					<td><input type="date" name="bday"></td>
+					<td><input type="text" name="ktn"></td>
+					<td><input type="text" name="rd"></td>
+				</tr>
+				</TABLE>
+				<tr>
+				<td></td>
+				<td><input type="checkbox" value="save">Save my secure Flight Passenger Data</td>
+				</tr>
+</td><br>
+		</tr>
+		<tr>
+			<td></td>
+			<td>This check indicates your consent to store your<span style="color:blue">Secure flight passenger Data</span> consistent with our privacy policy. For members,by checking this box,you also consent to Air lines,Inc.Sharing your information with TSA to be considered for TSA Pre/ at select TSA checkpoints. </td>
+		</tr>
+		<tr>
+			<td style="vertical-align:text-top;">Login Info</td>
+			<td>
+			<Table>
+			<tr>
+			<td>*EMAIL</td>
+			<td>*CONFIRM EMAIL ADDRESS</td>	
+			<td>Password requirements</td>		
+			</tr>
+		<tr>
+			<td><input type="email" name="email"></td>
+			<td><input type="email" name="conemail"></td>
+			<td rowspan="4">
+			<ul >
+					<li>6-20 characters long</li>
+					<li>not the same as your skymiles</li>
+					<li>no special characters or non-english characters</li>
+			</ul>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>*PASSWORD</td>
+			<TD>*CONFIRM PASSWORD</TD>
+		</tr>
+		<tr>
+			<td><input type="password" name="psw"></td>
+			<td><input type="password" name="conpws"></td>
+		</tr>
+		</tr>	
+		</table>
+		<tr>
+			<td></td>
+			<td>create a Username<br>
+			Username cannot contain special characters and cannot be your email address or contain only numbers,must be unique and at least 6 characters long</td>
+			<tr>
+				<td></td>
+				<td>
+				<table>
+				<tr>
+				<td>USERNAME</td>
+				</tr>
+			<tr>
+				<td><input type="text" name="text"></td>
+			</tr>
+			<tr>
+				<td>Establish Security Questions</td>
+			</tr>
+			<tr>
+				<td>*QUESTION 1</td>
+				<TD>*ANSWER 1</TD>
+			</tr>
+			<tr>
+				<td><select name="question1">
+						<option value="select one">select one</option>
+					</select></td>
+				<td><select name="answer1">
+						<option value="selectone">select one</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>*QUESTION 2</td>
+							<td>*ANSWER 2</td>
+						</tr>
+						<tr>
+							<td><select name="question2">
+								<option value="selectone">select one</option>
+							</select></td>
+							<td><select name="*answer2">
+								<option value="selectone">select one</option>
+							</select></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Contact info</td>
+				<td>
+					<TABLE>
+						<tr>
+							<td>PRIMARY MAILING ADDRESS</td>
+						</tr>
+						<TR>
+							<td>*COUNTRY</td>
+							<TD>*ADDRESS TYPE</TD>
+						</TR>
+						<tr>
+							<td>
+								<select name="country">
+									<option value="country"> United states</option>
+									<option value="country">india</option>
+									<option value="country"> canada</option>
+								</select>
+							</td>
+							<td>
+								<select name="ADDT">
+									<option value="ADDT">Home</option>
+									<option value="ADDT">bussiness</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>ADRESS LINE 1</td>
+							<TD>ADRESSLINE 2</TD>
+						</tr>
+						<tr>
+							<td><input type="text" name="ADDL1"></td>
+							<td><input type="text" name="ADDL2"></td>
+						</tr>
+						<tr>
+							<td>CITY</td>
+							<td>STATE/PROVINCE</td>
+							<td>*POSTAL CODE</td>
+						</tr>
+						<TR>
+							<td><input type="text" name="city"></td>
+							<td><select name="state">
+								<option value="florida">florida</option>
+								<option value="california">california</option>
+							</select></td>
+							<td><input type="text" name="postal"></td>
+						</TR>
+						</TABLE>
+						<table>
+							<tr>
+								<td>*DEVICE TYPE</td>
+								<TD>*COUNTRY CODE</TD>
+								<td>*AREA CODE</td>
+								<TD>*PHONE NUMBER</TD>
+							</tr>
+							<TR>
+								<td><select name="devicetype">
+									<option value="mobile">mobile</option>
+									<option value="laptop">laptop</option>
+								</select></td>
+								<td><input type="text" name="countrycode"></td>
+								<td><input type="text" name="areacode"></td>
+								<td><input type="number" name="phn" maxlength="10"></td>
+							</TR>						
+					</TABLE>
+				</td>
+			</tr>
+			<tr>
+				<td>Language<br> preference</td>
+				<td>The selection determine the language displayed when you visit.we will also send communications to you in your selected language when possible.</td><br>
+			</tr>
+			<tr>
+				<td></td>
+				<td>*language</td>
+				</tr>
+                <tr><td></td>
+				<td><select name="language">
+					<option value="english">english</option>
+					<option value="spanish">spanish</option>
+				</select></td></tr>
+			</tr>
+		</tr>
+		</Table>
+		</div>
+		<div>
+			<h3>NOTIFICATION PREFERENCE</h3>
+			<P>Stay in the know when it comes to your travel.Select a notifiaction you would like to recieve from us.<span style="color:blue">Privacy Policy</span></P>
+			<table style="border-spacing:15px;">
+				<tr>
+					<td>Flight Updates<br> and special Notification</td>
+					<td colspan="2">BEFORE YOU FLY UPDATES<br>
+					<span style="font-size:70%">Stay informed about any changes to your flight,from 2 months out to 2 days before your trip</span></td>
+					<td><button type="button" name="selected" style="background-color:green;width:125px;height:25px;border-radius:2px; border:0;"><span style="color:white;">SELECTED</span></button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>CONTACT ME AT</td>
+					<td>
+					 <select name="contact" value="Select one" style="width:80%">
+					   <option value="mobile">Mobile</option>
+					   <option value="Landline">LandLine</option>
+				     </select><br>
+				     <span style="font-size:70%">Add or update this selection at anytime by visiting my profile</span>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2">LAST MINUTE UPDATES<br>
+					<span style="font-size:70%">Get Updates about flight or gate changes closer to your flight.For irregular operations we will try all contact information regardless of your preference</span>
+					</td>
+
+					<td>
+					  <button type="button" name="selected" style="background-color:green;width:125px;height:25px;border-radius:2px; border:0;"><span style="color:white;">SELECTED</span></button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>CONTACT ME AT</td>
+					<td>
+					 <select name="contact" value="Select one" style="width:80%">
+					   <option value="mobile">Mobile</option>
+					   <option value="Landline">LandLine</option>
+				     </select><br>
+				     <span style="font-size:70%">Add or update this selection at anytime by visiting my profile</span>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2">
+						YOUR FLIGHT REMINDERS<br>
+                        <span style="font-size:70%">Be reminded when you are able to checkin, and get the current status of your flight via email.</span>
+					</td>
+					<td>
+						<button type="button" name="selected" style="background-color:green;width:125px;height:25px;border-radius:2px; border:0;"><span style="color:white;">SELECTED</span></button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2">
+						NEWS AND SPECIAL OFFERS<br>
+						<span style="font-size:70%">Subscribe now and stay up to date on special offers, promotions, travel and skymiles via email.</span>
+					</td>
+					<td>
+						<button type="button" name="selected" style="background-color:blue;width:125px;height:25px;border-radius:2px; border:0;"><span style="color:white;">SELECT</span></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	</html>
