@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+</head>	
+	<style>
+	table{
+		width: 50%;
+		float: center;
+		height: 140%;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border-spacing: 15px;
+    font-family: Arial;
+	}
+	table,th,td{
+		float: center;
+		border: 1px solid black;
+		border-radius: 10px 10px 10px 10px;
+	}
+	th{
+		background-color: blue;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;		
+	}
+	td,a{
+	     border-radius: 10px 10px 10px 10px;
+       padding: 5px;	
+	}
+	#name{
+		border: 1px solid black;		
+	}
+	a:link{ background-color: blue; color: white; text-decoration: none;}
+	a:visited{ background-color: white; color: blue; text-decoration: none;}
+	a:hover{ background-color: white; color: blue; text-decoration: none;}
+	a:active{ background-color: white; color: blue;text-decoration: none;}
+		</style>
+
+<body>
+	<table align="center">
+		<tr>
+			<th><a href="#">Round Trip</a></th>
+			<th><a href="#">One Way</a></th>
+			<th><a href="#">Multi City</a></th>
+		</tr>
+		<tr>
+             <td  id="name" colspan="3" name="destination">From</td>
+		</tr>
+		<tr>
+			<td  id="name" colspan="3" name="arrival">To</td>
+		</tr>
+		<tr>
+            <td><input type="date" name="deptdate" value="05/20/2015" style="border:0px;"/></td>
+            <td colspan="2" name="depttime"><select name="time" style="border:0px;">
+                    <option value="anytime">Anytime</option>
+                   <option value="morning">Morning</option>
+                   <option value="noon">Noon</option>
+                   <option value="evening">Evening</option>
+                   <option value="night">Night</option>
+                 </select> 
+             </td>
+		</tr>
+        <tr>
+            <td><input type="date" name="arrdate" value="05/27/2015" style="border:0px;"/></td>
+            <td colspan="2" name="arrtime"><select name="time" style="border:0px;">
+                    <option value="anytime">Anytime</option>
+                   <option value="morning">Morning</option>
+                   <option value="noon">Noon</option>
+                   <option value="evening">Evening</option>
+                   <option value="night">Night</option>
+                 </select> 
+             </td>
+		</tr>
+		<tr>
+		     <td><select name="number" style="border:0px;">
+                    <option value="1">1 Adult</option>
+                   <option value="2">2 Adult</option>
+                   <option value="3">3 Adult</option>
+                   <option value="4">4 Adult</option>
+                   <option value="5">5 Adult</option>
+                 </select> 		
+             </td>
+         	 <td colspan="2"><select name="number" style="border:0px;">
+                    <option value="0">0 child</option>
+                   <option value="1">1 child</option>
+                   <option value="2">2 child</option>
+                   <option value="3">3 child</option>
+                   <option value="4">4 child</option>
+                 </select> 
+             </td>
+         </tr>
+         <tr>
+         	 <td><select name="number" style="border:0px;">
+                    <option value="0">0 Lap Infant</option>
+                   <option value="1">1 Lap Infant</option>
+                   <option value="2">2 Lap Infant</option>
+                   <option value="3">3 Lap Infant</option>
+                   <option value="4">4 Lap Infant</option>
+                 </select> 
+             </td>
+         	 <td colspan="2"><select name="number" style="border:0px;">
+                    <option value="0">0 Seat Infant</option>
+                   <option value="1">1 Seat Infant</option>
+                   <option value="2">2 Seat Infant</option>
+                   <option value="3">3 Seat Infant</option>
+                   <option value="4">4 Seat Infant</option>
+                 </select> 
+             </td>
+         </tr>
+         <tr>
+         	 <td><select name="class/cabin" style="border:0px;">
+                    <option value="All">All Class/Cabin</option>
+                   <option value="A">A Class</option>
+                   <option value="B">B Class</option>
+                   <option value="C">C Class</option>
+                   </select> 
+             </td>
+            <td colspan="2" name="facilities" style="border:0px;">
+            	<input type="checkbox" name="facility">Flexible dates</input>
+            	<input type="checkbox" name="facility">Direct flights</input></br>
+            	<input type="checkbox" name="facility">Fares with no penalties</input></br>
+            	<input type="checkbox" name="facility">Nearby airports</input>
+            </td>
+         </tr>
+         <tr>
+         	<td colspan="3" border:0px; style="text-align: left; color:green; border:0;padding:0px;"><b>Preferred Airlines<b></td>
+          </tr>
+          <tr>
+          <td id="name" colspan="3" name="airlinename">1.</td>
+          </tr>
+          <tr>
+          <td id="name" colspan="3" name="airlinename">2.</td>
+          </tr>
+          <tr>
+          	<td colspan="3" name"searchdetails" style="border:0px;">
+          <input type="button" value="Search Flights" style="background-color:green; color:white; float:right;padding: 10px;border-radius:10px 10px 10px 10px"/>
+      </td>
+  </tr>
+</table>
+
+</body>
+</html>

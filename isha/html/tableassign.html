@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+     table,th,td{
+     	border: 1px solid black;
+      border-collapse: collapse;
+     }
+     .hide {
+      display: none;
+     } 
+     label{
+         padding-right: 5px;
+     } 
+	</style>
+</head>
+<body>
+  <div>
+    <label for="d1">First Name</label><input id="d1" type="text"/></br></br>
+    <label>Last Name</label><input type="text"/></br></br>
+    <label>D.O.B.</label><input type="date"/></br></br>
+    <label>Frequent Flyer #</label><input type="text"/></br></br>
+    <label style="display:none;">Meals Type</label>
+        <select type="meals" style="display:none;">
+        <option> Veg </option>
+        <option> Vegan </option>
+        <option> Meat </option>
+        <option> KosherCountry </option>
+        </select></br></br>
+     <label> Country </label>
+        <select type="country">
+        <option> USA </option>
+        <option> India </option>
+        <option> Canada </option>
+        </select> </br></br>
+    <label>State</label><input type="text"/></br></br>
+    <label>City</label><input type="text"/></br></br>
+    <label>ZipCode</label><input type="number"/></br></br>
+    <input type="button" value="Add" style="margin-right: 10px;"/><input type="button" value="Update" style="margin-right: 10px;"/><input type="button" value="Delete"/></br></br>
+
+<table>
+  <tr>
+   <th></th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>D.O.B.</th>
+    <th>Flyer Passenger #</th>
+    <th>Meal Type</th>
+    <th>View/Edit</th>
+    <th class="hide">Country</th>
+    <th class="hide">State</th>
+    <th class="hide">City</th>
+  </tr> 
+   <tr>
+    <td><input type="checkbox"></td>
+    <td>Joe</td>
+    <td>LSmith</td>
+    <td>2/10/1980</td>
+    <td>ADGR89678</td>
+    <td>Non Veg</td>
+    <td><a href="#">View/Edit </a></td>
+    <td class="hide">Canada</td>
+    <td class="hide">Ontario</td>
+    <td class="hide">Toronto</td> 
+  </tr>
+   <tr>
+    <td><input type="checkbox"></td>
+    <td>Sue</td>
+    <td>Williams</td>
+    <td>12/11/1983</td>
+    <td>ADKH8933</td>
+    <td>Non Veg</td>
+    <td><a href="#">View/Edit </a></td>
+    <td class="hide">USA</td>
+    <td class="hide">MN</td>
+    <td class="hide">Edina</td>
+  </tr>
+   <tr>
+    <td><input type="checkbox"></td>
+    <td>Sunita</td>
+    <td>Singhi</td>
+    <td>2/1/1978</td>
+    <td>AIIR89678</td>
+    <td>Veg</td>
+    <td><a href="#">View/Edit </a></td>
+    <td class="hide">India</td>
+    <td class="hide">Maharashtra</td>
+    <td class="hide">Mumbai</td>
+  </tr>
+   <tr>
+    <td><input type="checkbox"></td>
+    <td>Tammi</td>
+    <td>Molnoskey</td>
+    <td>5/30/1977</td>
+    <td>RDGR89678</td>
+    <td>Non Veg</td>
+    <td><a href="#">View/Edit </a></td>
+    <td class="hide">USA</td>
+    <td class="hide">Florida</td>
+    <td class="hide">Miami</td>
+  </tr> 
+  <tr>
+  <td><input type="checkbox" name="passengers"></td>
+    <td>Amanda</td>
+    <td>Peterson</td>
+    <td>10/23/1967</td>
+    <td>ADGR83245</td>
+    <td>Non Veg</td>
+    <td><a href="#">View/Edit </a></td>
+    <td class="hide">USA</td>
+    <td class="hide">Nevada</td>
+    <td class="hide">LV</td>
+  </tr>
+  
+</table>
+</body>
+</html>
