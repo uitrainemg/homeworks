@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	<style type="text/css">
+
+#paytype, h2 {
+	padding: 5px;
+	margin-left: 0px; 
+	margin-top: 10px;
+	margin-bottom:10px;
+	width:900px;
+}
+label {
+  margin-right: 20px;
+}
+.floating-box {
+    /*display: inline-block;*/
+    float:left;
+    width: 270px;
+    height: 200px;
+    margin: 5px;
+    padding: 10px;
+    border: 3px solid black; 
+    background-color: #1E90FF; 
+ }
+input{
+    border: 2px solid black; 
+    width: auto;
+}
+	
+.block-box{
+	display: block;
+	margin: 10px;
+    padding: 10px;
+}
+.block-box-color{
+	margin: auto;
+    padding: 8px;
+    background-color: lightgray;
+    border-radius: 15px;
+    bottom:0;
+    width: 70%;
+}
+
+
+	</style>
+</head>
+
+<body>
+
+<div id="main">
+<h2>Payment methods</h2>
+	<div id="paytype">
+		<input  type="radio" name="rdcredit" value="credit" checked/><label name="lbl"> Credit \ Debit Card</label>
+		<input  type="radio" name="rdpaypal" value="paypal"/><label name="lbl"> PayPal</label>
+		<input  type="radio" name="rdgift" value="gift"/><label name="lbl"> Gift Card</label>
+	</div>
+
+	<div id="container">
+		<div class="floating-box">
+		    <div class="block-box">
+				<input  type="radio" name="rdcreditone" value="credit" checked/><label name="lbl"> Credit</label>
+				<input  type="radio" name="rddebittwo" value="debit"/><label name="lbl"> Debit</label>
+				<input type="text" name="paytype" size="30">
+			</div>
+
+			<div class="block-box">
+				<select name="types">
+					<option value="1">Options</option>
+				</select>
+				<select name="types">
+					<option value="1">Options</option>
+				</select>
+				<input type="text" name="paytype1" size="5">
+			</div>
+			<div class="block-box">
+				<input type="text" name="paytype2" size="30">
+			</div>	
+		</div>
+
+		<div class="floating-box">
+
+			<div class="block-box">
+			<strong><font size="5">PayPal</font></strong><br/><br/>
+			<input type="text" name="paypaltype1" size="30">
+			</div>	
+			<div class="block-box">
+			<input type="text" name="paypaltype2" size="30">
+			</div>
+			<div class="block-box-color">
+			Get the buy now button image for paypal
+			</div>	
+		</div>
+
+		<div class="floating-box">
+			
+			<div class="block-box">
+			<strong><font size="5">Gift Card</font></strong><br/><br/>
+			<input type="text" name="paygifttype1" size="30">
+			</div>	
+			<div class="block-box">
+			<input type="text" name="paygifttype2" size="30">
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
