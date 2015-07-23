@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	table ,th,td{
+		border:1px solid black;
+		border-collapse: collapse;
+		text-align: center;
+		color:black;
+	}
+	body.gradient{
+		border: 0;
+		height: 500px;
+		background-image: -webkit-linear-gradient(left,gray,white);
+		background: -moz-linear-gradient(left,gray,white); 
+        background: linear-gradient(left,gray,white); 
+	    }
+	.hidden{
+		visibility: hidden;
+	}	
+</style>
+<body class="gradient" style="align:center;">
+<h1 style="text-align:center">Passengers</h1>
+<div  style="width:50%;margin:auto; ">
+	<label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="dob">DOB</label><br>
+    <input type="date" id="dob" name="dob"><br>
+    <label for="ff#">frequent flyer number</label><br>
+    <input type="text" id="ff#" name="ff#"><br>
+    <label class="hidden">Meals Type</label><br>
+        <select class="hidden" type="meals" >
+        <option> Veg </option>
+        <option> Vegan </option>
+        <option> Meat </option>
+        <option> KosherCountry </option>
+        </select></br>
+    <label for="country"> Country </label><br>
+        <select type="country">
+        <option> USA </option>
+        <option> India </option>
+        <option> Canada </option>
+        </select> </br></br>   
+    <label for="state">state </label><br>
+    <input type="text" id="state" name="state"><br> 
+    <label for="city">City </label><br>
+    <input type="text" id="city" name="city"><br>   
+    <label for="zipcode">Zip Code </label><br>
+    <input type="number" id="zipcode" name="zipcode"><br>
+    <button type="button" style="margin:5px;margin-left:0px;">Add</button>
+    <button type="button" style="margin:5px;">Update</button>
+    <button type="button" style="margin:5px;">Delete</button>
+
+</div>
+
+	<table align="center" style="width:50% ">
+		<tr>
+			<th></th>
+			<th>FIRST NAME</th>
+			<th>LAST NAME</th>
+			<th>DOB</th>
+			<th>FREQUENT FLYER #</th>
+			<th>MEAL TYPE</th>
+			<th>VIEW</th>
+			<th class="hidden">country</th>
+			<th class="hidden">state</th>
+			<th class="hidden">city</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="passengers"></td>
+				<td>joe</td>
+				<td>smith</td>
+				<td>10/07/1983</td>
+				<td>abc123</td>
+				<td>veg</td>
+				<td><a href="https://www.google.com" target="_top">google</a></td>
+				<td class="hidden">USA</td>
+				<td class="hidden">Florida</td>
+				<td class="hidden">Sunrise</td>
+
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="passengers"></td>
+			<td>clara</td>
+			<td>jones</td>
+			<td>15/08/1987</td>
+			<td>efg345</td>
+			<td>non-veg</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="passengers"</td>
+			<td>will</td>
+			<td>black</td>
+			<td>23/05/1986</td>
+			<td>hij234</td>
+			<td>veg</td>
+			<td></td>
+		</tr>
+		<tr>
+		    <td><input type="checkbox" name="passengers"></td>
+			<td>pedro</td>
+			<td>taurus</td>
+			<td>14/05/1990</td>
+			<td>klm891</td>
+			<td>veg</td>
+			<td></td>			
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="passengers"></td>
+			<td>marry</td>
+			<td>ming</td>
+			<td>26/12/1980</td>
+			<td>nop567</td>
+			<td>non-veg</td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</head>
+</html>
