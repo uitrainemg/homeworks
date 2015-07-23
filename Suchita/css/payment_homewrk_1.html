@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>payment method</title>
+	<style type="text/css">
+
+	
+.before-box {   
+    height: 30px;
+    width:64.5%;
+    text-align: left;
+    
+    padding: 10px;
+    padding-left: 0px;
+   
+    }
+.div1 {
+    background-color: CornflowerBlue;
+    display:inline-block;
+    float: left;
+    width: 260px;
+    height: 180px;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.div2 {
+    background-color: CornflowerBlue;
+    float:left;
+    width: 260px;
+    height: 180px;
+    padding:15px;  
+    padding-bottom: 0px;  
+    margin-left:20px;
+    margin-top: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.div3{
+    background-color: CornflowerBlue;
+    float:left;
+    width: 260px;
+    height: 180px;
+    padding:15px;    
+    margin-left:20px;
+    margin-top: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+.input1{
+    margin-right: 20px;
+    border:2px solid black;
+}
+.button{
+    background-color: Lavender ;
+    vertical-align: center;
+    border:2px solid black;
+    width: 160px;
+    height: 44px;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+input{border:2px solid black;}
+select{border:2px solid black;}
+
+
+    </style>
+</head>
+<body>
+
+<h1 style="margin:10px;margin-left:0px;">Pay Method</h1>
+
+<div class="before-box" >
+	<input type="radio" class="input1" name="credit" value="credit" checked="">Credit/Debit Card;
+	<input type="radio" class="input1" name="paypal" value="paypal">PayPal;
+	<input type="radio" class="input1" name="giftcard" value="gift">Gift Card; 
+</div>
+
+<div class="div1">
+    <input type="radio" name="credit" value="credit" checked="">Credit;
+    <input type="radio" name="debit" value="debit">Debit;<br><br>
+    <input type="text" name="card#" size="27" >
+    <br><br><br>
+    <select name="option1">
+        <option value="voption1"> Options</option>
+    </select>
+    <select name="option2">
+        <option value="voption2"> Options</option>
+    </select>
+    <input type="text" name="text1" size="5"><br><br>
+    <input type="text" name="card#" size="27" >
+</div>
+
+<div class="div2">
+    <p style="font-size:150%;font-weight:bold;margin-bottom:12px;margin-top:0px">PayPal</p>
+    <input type="text" name="card#" size="27" ><br><br>
+    <input type="text" name="card#" size="27" ><br><br>
+    <div class="button">Now buy and get the button image for Paypal</div>
+</div>
+<div class="div3">
+    <p style="text-align:center;font-size:159%;font-weight:bold;margin-top:0px;">Gift Card</p>
+    <input type="text" name="card#" size="27" ><br><br>
+    <input type="text" name="card#" size="20" ><br><br>
+</div>
+</body>
