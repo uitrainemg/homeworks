@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>flight booking</title>
+<style type="text/css">
+  
+  #hi  {
+	background-color:blue;
+	color:white;
+	padding:5px;
+	max-height:20px;
+	display: inline;
+       }
+  .space{
+	text-indent: 10%;
+        } 
+   #sub{
+	
+	border:1 px;
+	border-collapse: collapse;
+	background-color: green;
+	background-position: right bottom;
+	padding:5px;
+	width:7%;
+	max-height:20px;
+        }
+
+</style>
+ </head>
+<body>
+   <h1>flight details</h1>
+
+<div style="width:90%;height=80%;border:1px solid black">
+   <form action=action-page.php>
+<div id="hi">
+       <input  type="button" onclick="Round Trip" value="Round Trip">
+       <input  type="button" onclick="One Way" value="One Way">
+       <input  type="button" onclick="Multi City" value="Multi City">
+</div><br><br>
+
+       <input type="text" name="from" placeholder="from" size="45"><br><br>
+       <input type="text" name="to" placeholder="to" size="45"><br><br>
+       <input type="date"  name="date"  placeholder="date">
+<select name="Anytime">
+ 	<option value="Anytime">anytime</option>
+ 	<option value="morning">morning</option>''
+ 	<option value="afternoon">afternoon</option>
+ 	<option value="evening">evening</option>
+</select><br></br>
+ 	<input type="date"  name=""  placeholder="date">
+<select name="Anytime">
+ 	<option value="Anytime">anytime</option>
+ 	<option value="morning">morning</option>
+ 	<option value="afternoon">afternoon</option>
+ 	<option value="evening">evening</option><br><br>
+</select><br><br>
+        <input type="number" name="adult"  placeholder="1Adult" min="1" max="9" >
+        <input type="number" name="child" placeholder="0child"  min="0" max="9" ><br><br>
+        <input type="number" name="lapinfant" placeholder="0 Lap Infant" min="0" max="9">
+        <input type="number" name="seat infant" placeholder="0 Seat Infant" min="0" max="9"><br><br>
+<select name="All class/cabin">
+	<option value="All Class/Cabin">All Class/Cabin</option>
+	<option value="Premium Economy">Premium Economy</option>
+	<option value="Bussiness">Business</option>
+	<option value="First">First</option>
+</select>
+        <input type="radio" name="flexible dates">Flexible Dates
+        <input type="radio" name="Direct Flights">Direct Flights<br>
+<p class="space"><input type="radio" name="fares with no penalities">Fares with no penalities</p>
+<p class="space"><input type="radio" name="near by airports">Near by airports</p>
+
+</form>
+
+<p style="color:green">Preffered Airlines:</p>
+
+        <input type="text" name="Preffered Airlines"><br><br>
+        <input type="text" name="Preffered Airlines"><br><br>
+
+<p id="sub"><input type="submit" name="search flights" value="search flights"></p>
+</div>
+</body>
+</html>
