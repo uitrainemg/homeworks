@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>personal information</title>
+	<style>
+	.col{
+		color:blue;
+	}
+	.bor{
+		border-style: solid;
+		border-width: 10px;
+		border-color: blue;
+		width:100%;
+		height:100%;
+		padding-bottom: 2px;
+		}
+	#header{
+		text-align: left;
+	}
+	.header1{
+
+		text-align: right;
+	}
+	.sel{ float: right;
+          padding: 1px;
+          width: 6%;
+         height: 9%;
+         border: 1px solid green;
+         background-color: green;
+   }
+   #sel1{
+   	      float: right;
+         /* padding: 1px;
+          width: 6%;
+         height: 9%;*/
+         border: 1px solid blue;
+         background-color: blue;
+   }	
+	.nav{
+		 height:270px;
+         width:150px;
+         float:left;
+         padding:9px;	      
+    }
+    .nav1{
+    	height:100px;
+         width:150px;
+         float:left;
+         padding:9px;	      
+         }
+    .space{
+    	text-indent: 30%;
+    }
+    .spa{
+    	text-indent: 13%
+    }
+    
+</style>
+</head>
+<body>
+  <div class="bor">
+<h2 id="header">PERSONAL INFORMATION</h2>
+<h2 class="header1" >*REQURIED</h2><p class="header1">English Characters only</p>
+<hr></hr>
+<h2 class="nav">Basic Info</h2>
+	<p>Please make sure your full name entered exactly as it appears on your qovernment-issued identifications.</p>
+	<p>this <span class="col">Secure Flight Passengers Data </span> for use by the <span class="col">Transportation Security Adiministration </span>only.</p>
+				PREFIX<select>
+							<option>prefix</option>
+							<option>Mr</option>
+							<option>Miss</option>
+							<option>Mrs</option>
+					</select>
+	*FIRSTNAME<input type="text" name="FIRSTNAME" size=10%>
+	MIDDLENAME<input type="text" name="MIDDLENAME" size=10%>
+	LASTNAME<input type="text" name="LASTNAME" size=10%>
+				SUFIX<select>
+								<option>--</option>
+					</select><br><br>
+	 		*GENDER<select name="GENDER">
+							<option value="gender">Select One</option>
+							<option value="gender">Male</option>
+							<option value="gender">Female</option>
+	                 </select>
+	    *DATE OF BIRTH<select name="month">
+							<option value="month">month</option>
+							<option value="january">1</option>
+							<option value="feburary">2</option>
+							<option value="march">3</option>
+							<option value="april">4</option>
+							<option value="may">5</option>
+							<option value="june">6</option>
+							<option value="july">7</option>
+							<option value="august">8</option>
+							<option value="september">9</option>
+							<option value="october">10</option>
+							<option value="november">11</option>
+							<option value="december">12</option>
+					</select>
+					<select name="day">
+							<option value="day">day</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+					</select>
+					<select name="year">
+							<option value="year">year</option>
+							<option value="2015">2015</option>
+							<option value="2014">2014</option>
+							<option value="2013">2013</option>
+							<option value="2012">2012</option>
+							<option value="2011">2011</option>
+							<option value="2010">2010</option>
+							<option value="2009">2009</option>
+							<option value="2008">2008</option>
+							<option value="2007">2007</option>
+							<option value="2006">2006</option>
+							<option value="2005">2005</option>
+							<option value="2004">2004</option>
+							<option value="2003">2003</option>
+							<option value="2002">2002</option>
+							<option value="2001">2001</option>
+							<option value="2000">2000</option>
+							<option value="1999">1999</option>
+							<option value="1998">1998</option>
+							<option value="1997">1997</option>
+							<option value="1996">1996</option>
+							<option value="1995">1995</option>
+                             <option value="1994">1994</option>
+                             <option value="1993">1993</option>
+                             <option value="1992">1992</option>
+                             <option value="1991">1991</option>
+                             <option value="1990">1990</option>
+                     </select>
+
+   <p>KNOWN TRAVELLER NUMBER<SPAN style="background-color:blue"><input TYPE="SUBMIT" name="?" value="?"></SPAN> <input type="text" >
+   <p>REDRESS NUMBER<SPAN style="background-color:blue"><input TYPE="SUBMIT" name="?" value="?"></SPAN> <input type="text" >
+   <p><input type="checkbox" > Save Me Secure Flight Passenger Data </p>
+   <p>This check indicates your consent to store your <span class="col" > Secure Flight Passenger Data </span> consistent with our <span class="col">privacy policy.</span> For members by checking this box , you also consent to Air lines .Inc sharing your information with TSA to be considered for <span class="col"> TSA pre/ </span> at select TSA checkpoints.
+   </p><br>
+<hr></hr>
+<h1 class="nav">Login Info</h1>
+   <p class="section">EMAIL<input type="text" name="email"> 
+          CONFIRM EMAIL ADDRESS<input type="text" >
+          PASSWORD REQUIREMENTS<p style="text-indent:50%"><input type="checkbox" >6-20 characters long</p>
+   <p style="text-indent:50%"><input type="checkbox">Not the same as your SkyMiles number,email address or username</p>
+   <p style="text-indent:50%"><input type="checkbox">no special characters or non-english characters</p>
+         *PASSWORD<input type="password" name="password">
+         *CONFIRM PASSWORD<input type="password"><br>
+         Create a Username<p>Username cannot contain speial characters and cannot be your email address or contain only numbers,must be unique and atleast 6 characters long</p>
+         USERNAME<input type="text" name="username" >
+   <p>Establish Security Questions</p>
+                 *QUESTION <select name="question1">
+                                   <option value="question1">select One</option>
+                                   <option value="question1">whats yours fisrt pet name</option>
+                                   <option value="question1">who is your favourite freedom fighter</option>
+                           </select>
+        *ANSWER<input type="text">
+   <p style="text-indent:13%">
+               *QUESTION2 <select name="quetion2">
+                                  <option value="question2">select One</option>
+                                  <option value="question2">who is your childhood friend</option>
+                                  <option value="question2">The first holiday place you visit</option>
+                          </select>
+         *ANSWER<input type="text">
+   </p>
+<hr></hr>
+<h1 class="nav1">Contact Info</h1>
+   <p>PRIMARY MAILING ADDRESS</p>
+                  *COUNTRy<select name="country">
+                                   <option value="country">country</option>
+                                   <option value="usa">unitedstates</option>
+                           </select>
+               *ADDRESS TYPE<select name="address type">
+                                   <option value="address">select One</option>
+                          </select>
+<br><br>
+       *ADDRESS LINE1<input type="text">
+        ADDRESS LINE2<inpit type="text"></inpit><br><br>
+        *CITY<input type="city">
+              *STATE/PROVINCE<select name="state/province">
+                                     <option value="Select one">Select one</option>
+                            </select>
+       *POSTAL CODE<input type="text"><br><br>
+                *DEVICE TYPE <select>
+	                                 <option>Select One</option>
+                             </select>
+                *COUNTRY CODE<select>
+	                                 <option>United States1</option>
+                             </select>
+      *AREA CODE<input type="number">
+      *PHONE NUMBER<input type="number">
+<hr></hr>
+<h1 class="nav1">Language Preference</h1><br><br>
+   <p>This section defines the language displayed when u visit. We will also send communcations to you in your selected language when possible.</p>
+                 *LANGUAGE<select>
+	                              <option>English</option>
+	                              <option>Spanish</option>
+	                              <option>French</option>
+                           </select><br><br>
+</div>
+<div class="bor">
+<h2 class="header">NOTIFICATION PREFERENCE</h2>
+<hr></hr>
+    <p>Stay in the know when it comes to your travel.Select the notification you'd like to recieve from us .See <span class="col">Privacy Policy</span></p>
+<hr></hr><br><br>
+<h2 class="nav">Flight Updates and Special Notifications</h2>
+       BEFORE YOU FLY UPDATES<p>Stay informed about any changes to your flight ,from 2 months out to 2 days before your trip<h6 class="sel"><input type="submit" name="SELECTED" value="SELECTED"></h6></p><br><br>
+
+                     CONTACT MEAT   <select>
+	                                    <option>Select One</option>
+                                    </select>
+<p style="text-indent:9%">Add or Update this selection at any time by visting my profile</p><br><br>
+LAST-MINUTE UPDATES <p>Get updates about flights or gate changes closer to your flight.For irregular operations ,we'll try all contact information ,regardless of your preference<h6 class="sel"><input type="submit" name="SELECTED" value="SELECTED"></h6></p><br><br>
+                     CONTACT MEAT   <select>
+	                                    <option>Select One</option>
+                                    </select>
+ <p style="text-indent:22%">Add or Update this selection at any time by visting my profile</p><br><br>
+ <p class="spa">YOUR FLIGHT REMINDERS <p class="spa">Be reminded when you're able to check in,and get the current status of your flight via email.<h6 class="sel"><input type="submit" name="SELECTED" value="SELECTED"></h6></p></p><br><br>
+ <p class="spa">NEWS AND SPECIAL OFFERS<p class="spa">Subscribe now and stay up to date on special offers,promotions ,travel and SkyMiles information via email.<h6 id="sel1"><input type="submit" name="SELECT" value="SELECT"></h6></p></p>
+
+</div>
+</body>
+</html>

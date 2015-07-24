@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TABLE INFO</title>
+	  <style type="text/css">
+  
+		  table{
+		 	    border-radius: 10px;
+			    border:2px solid black;
+			    width:100%;
+			    padding:25px;
+		      }
+							 th{ 
+							 	border-radius: 5px;
+							    padding: 30px;
+							    border:1px solid #D00000;
+							 	background-color: #D00000; 
+							 	color:  dark green;
+							 	font-family: serif;
+                                                            }
+										 td{
+										 	border-radius: 5px;
+											padding: 20px;
+											border:1px solid #383838;
+										   }
+                                                     button{
+                                                     	background-color: blue;
+                                                     	padding: 5px;
+                                                     	padding-right: 30px
+                                                            } 
+                                                          .hide{
+                                                          	display: none;
+                                                                }
+                                                     
+
+                                                                              .radius{
+										        border-radius: 5px;
+										   	 padding:5px;
+										     }
+					 .clrcg{
+					 	    background-color: #383838;
+					 	    color: green;
+					 	    font-family: serif;
+					       }
+		.clr{
+			background-color: #680000;
+		 	color: pink;
+		 	font-family: sans-serif;
+                    }
+
+</style>
+</head>
+<body>
+    <div>
+        First Name <input type="text" class="radius"><br><br>
+             Last Name <input type="text" class="radius"><br><br>
+                 DOB <input type="date" class="radius"><br><br>
+                    Frequent Flyer <input type="text" class="radius"><br><br>
+							<a class="hide">Meals <select class="radius",>
+							       <option>meals</option>
+							       <option>Veg</option>
+							       <option>Vegan</option>
+							       <option>Meat and KosherCountry</option>
+							       </select></a><br><br>
+											Country <select class="radius">
+											           <option>Country</option>
+											           <option>USA</option>
+											           <option>Canada</option>
+											           <option>India</option>
+											        </select><br><br>
+                                       State  <input type="text" class="radius"><br><br>
+                                City  <input type="text" class="radius"><br><br>
+                          Zipcode <input type="number" class="radius"><br><br>
+                    <button>Add</button>
+              <button>Update</button>
+         <button>Delete</button>
+   </div><br><br>
+        <table>
+             
+                    <tr>
+                       <th>First Name</th>
+                       <th>Last Name</th>
+                       <th>DOB</th>
+                       <th>Frequent Flyer #</th>
+                       <th>Meal Type</th>
+                       <th class="hide">City</th>
+                       <th class="hide">State</th>
+                       <th class="hide">Country</th>
+                     </tr>
+                                                   <tr class="clr">
+                                                       <td>Joe</td>
+                                                       <td>Smith</td>
+                                                       <td>1/1/1980</td>
+                                                       <td>AAAwz</td>
+                                                       <td>meat</td>
+                                                       <td class="hide">Atlanta</td>
+                                                       <td class="hide">GA</td>
+                                                       <td class="hide">USA</td>
+                                                    </tr>
+                                                       
+
+                                                   
+                                                                        <tr class="clrcg">
+									    <td>Clara</td>
+									    <td>Jones</td>
+									    <td>1/12/1987</td>
+									    <td>BSHL890</td>
+									    <td> vegan</td>
+									    <td class="hide">Denver</td>
+									    <td class="hide">Colorodo</td>
+									    <td class="hide">USA</td>
+									</tr>
+													<tr class="clr">
+													<td>Will</td>
+													<td>Black</td>
+													<td>2/2/1977</td>
+													<td>VKJS78</td>
+													<td>chicken</td>
+													<td class="hide">SpringField</td>
+													<td class="hide">IL</td>
+													<td class="hide">USA</td>
+													</tr>
+							<tr class="clrcg">
+							<td>Michal</td>
+							<td>Renold</td>
+							<td>11/12/1999</td>
+							<td>AWDC456</td>
+							<td>veg</td>
+							<td class="hide">Hyderbad</td>
+							<td class="hide">Telangana</td>
+							<td class="hide">India</td>
+							</tr>
+		<tr class="clr">
+		<td>Rose</td>
+		<td>Mary</td>
+		<td>12/1/2000</td>
+		<td>RDGGG340</td>
+		<td>Meat</td>
+		<td class="hide">vizag</td>
+		<td class="hide">AP</td>
+		<td class="hide">India</td>
+		
+		</tr>
+		</table>
+
+	
+
+<p style="text-align:bottom"><a href="http://www.americanairlines.com">click link</a></p>
+</body>
+</html>

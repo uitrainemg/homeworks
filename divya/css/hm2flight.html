@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>flight booking</title>
+<style type="text/css">
+#border{ 
+	    border-radius: 10px;
+	    border:2px solid black;
+	    margin:35px 730px 75px 100px;
+	    padding:25px;
+       }
+    .header{
+	         border-radius: 5px;
+             font-family: arial;
+             background-color:blue;
+             margin-bottom: 10px;
+      		 color:white;
+	         padding: 9px;
+	         padding-right: 30px;
+	         text-indent: 20px;
+	        }
+	.radius {
+		     border-radius: 5px;
+		     padding: 10px;
+		     padding-right: 190px;
+	        }
+	.radius1{
+		     border-radius: 5px;
+		     padding: 10px;
+		     padding-right: 65px;
+	       }
+     .space{
+	         text-indent: 220px;
+           } 
+#col{
+	margin-top: 10px;
+	 margin-left: 350px;
+	 background-color: green;
+	 padding: 5px;
+	 }
+</style>
+  </head>
+    <body>
+      <h1>flight details</h1>
+         <div id="border">
+           <form action=action-page.php>
+               <button  class="header">Round Trip</button><button class="header">One Way</button><button class="header">Multi City</button><br>
+                  <input type="text" value="From" class="radius"><br><br>
+                  <input type="text" value="To" class="radius"><br><br>
+                  <input type="date"  value="7/22/2015"  class="radius1">
+                      <select name="Anytime" class="radius1">
+ 	                         <option value="Anytime">anytime</option>
+ 	                         <option value="morning">morning</option>
+ 	                         <option value="afternoon">afternoon</option>
+ 	                         <option value="evening">evening</option>
+                      </select><br></br>
+ 	              <input type="date" placeholder="date" class="radius1">
+                       <select name="Anytime" class="radius1">
+ 	                          <option value="Anytime">anytime</option>
+ 	                          <option value="morning">morning</option>
+ 	                          <option value="afternoon">afternoon</option>
+ 	                          <option value="evening">evening</option>
+                        </select><br><br>
+                   <input type="number" placeholder="Adult" min="1" max="9" class="radius1" >
+                   <input type="number" placeholder="0 child"  min="0" max="9" class="radius1" ><br><br>
+                   <input type="number" placeholder="0 Lap Infant" min="0" max="9" class="radius1">
+                   <input type="number" placeholder="0 Seat Infant" min="0" max="9" class="radius1"><br><br>
+                        <select name="All class/cabin" class="radius1">
+	                            <option value="All Class/Cabin">All Class/Cabin</option>
+	                             <option value="Premium Economy">Premium Economy</option>
+	                             <option value="Bussiness">Business</option>
+	                             <option value="First">First</option>
+                         </select>
+
+                   <input type="radio">Flexible Dates
+                   <input type="radio">Direct Flights
+                <p class="space">
+                   <input type="radio">Fares with no penalities</p>
+                <p class="space">
+                   <input type="radio">Near by airports</p>
+                
+               Preffered Airlines:<br>
+                    <input type="text" class="radius"><br><br>
+                    <input type="text" class="radius"><br><br>
+               <button id="col">search flights</button>
+
+           </form>
+        </div>
+   </body>
+</html>

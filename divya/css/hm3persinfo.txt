@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>personal information</title>
+	<style>
+	
+.col{
+    	color:blue;
+	    }
+      .bor{
+		   border-radius: 7px;
+		   border:1px solid blue;
+		   border-left-width: 25px; 
+		   border-right-width: 25px;
+		   border-bottom-width: 10px;
+		   padding-bottom: 20px;
+		  }
+           .toplf{
+		         font-family: sans-serif;
+		        font-size: 30px;
+	             }
+                  #toprt{
+                         margin-left: 650px;
+                         font-family: sans-serif;
+	                     font-size: 30px;
+                        }
+                        #topdw {
+	                             margin-left: 1000px;
+	                            }
+
+	
+                                  .green{
+		                                 margin-left: 400px;
+		                                 background-color: green;
+		                                 padding-right: 15px;
+		                                 padding:5px;
+		                                 color: white;
+                                         }
+                                         #blu{ 
+	                                          margin-left: 300px;
+   	                                          background-color: blue;
+   	                                          padding: 5px;
+   	                                          color: white;
+                                               }	
+                                 .nav{
+	                                 height:270px;
+                                     width:150px;
+                                     float:left;
+                                     padding:9px;
+                                     }
+                          .nav1{
+                                height:100px;
+                                width:150px;
+                                float:left;
+                                padding:9px;	      
+                                }
+                  .nav2{
+                        height:700px;
+                        width:150px;
+                        float: left;
+                        padding:9px;
+                        }
+    
+             .spa{
+              text-indent: 13%
+                 }
+       .radius{
+    	       border-radius: 100px;
+    	       background-color: blue;
+               color:white;
+               }
+.rabx{
+     border-radius: 5px;
+     padding: 5px;
+     padding-right: 10px;
+    }
+</style>
+  </head>
+    <body>
+      <div class="bor">
+        <span class="toplf">PERSONAL INFORMATION</span>
+          <span id="toprt" >*REQURIED</span>
+        <h4 id="topdw">English Characters only</h4>
+<hr></hr>
+<h2 class="nav">Basic Info</h2>
+  <p>Please make sure your full name entered exactly as it appears on your qovernment-issued identifications.</p>
+	 <p>this <span class="col">Secure Flight Passengers Data </span> for use by the <span class="col">Transportation Security Adiministration </span>only.</p>
+		 PREFIX   <select class="rabx">
+							<option>Ad</option>
+							<option>Mr</option>
+							<option>Miss</option>
+							<option>Mrs</option>
+				  </select>
+	*FIRSTNAME  <input type="text" class="rabx">
+	   MIDDLENAME  <input type="text" class="rabx">
+	     LASTNAME    <input type="text" class="rabx">
+			SUFIX<select class="rabx">
+							<option>--</option>
+				</select><br><br>
+	 		   *GENDER<select class="rabx">
+							<option value="gender">Select One</option>
+							<option value="gender">Male</option>
+							<option value="gender">Female</option>
+	                 </select>
+	               *DATE OF BIRTH<select class="rabx">
+							        <option value="month">month</option>
+									<option value="january">1</option>
+									<option value="feburary">2</option>
+									<option value="march">3</option>
+									<option value="april">4</option>
+									<option value="may">5</option>
+									<option value="june">6</option>
+									<option value="july">7</option>
+									<option value="august">8</option>
+									<option value="september">9</option>
+									<option value="october">10</option>
+									<option value="november">11</option>
+									<option value="december">12</option>
+									</select>
+											<select class="rabx">
+												<option value="day">day</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+														<select class="rabx">
+																<option value="year">year</option>
+																<option value="2015">2015</option>
+																<option value="2014">2014</option>
+																<option value="2013">2013</option>
+																<option value="2012">2012</option>
+																<option value="2011">2011</option>
+																<option value="2010">2010</option>
+																<option value="2009">2009</option>
+																<option value="2008">2008</option>
+																<option value="2007">2007</option>
+																<option value="2006">2006</option>
+																<option value="2005">2005</option>
+																<option value="2004">2004</option>
+																<option value="2003">2003</option>
+																<option value="2002">2002</option>
+																<option value="2001">2001</option>
+																<option value="2000">2000</option>
+																<option value="1999">1999</option>
+																<option value="1998">1998</option>
+																<option value="1997">1997</option>
+																<option value="1996">1996</option>
+																<option value="1995">1995</option>
+                             									<option value="1994">1994</option>
+                             									<option value="1993">1993</option>
+                             									<option value="1992">1992</option>
+                             									<option value="1991">1991</option>
+                             									<option value="1990">1990</option>
+                     									</select>
+
+                               <p>KNOWN TRAVELLER NUMBER<button class="radius">?</button><input type="text" class="rabx">
+   	                 <span>REDRESS NUMBER<button class="radius">?</button><input type="text" class="rabx"></span>
+   		      <p><input type="checkbox" > Save My Secure Flight Passenger Data </p>
+   		<p>This check indicates your consent to store your <span class="col" > Secure Flight Passenger Data </span> consistent with our <span class="col">privacy policy.</span> For members by checking this box , you also consent to Air lines .Inc sharing your information with TSA to be considered for <span class="col"> TSA pre/ </span> at select TSA checkpoints.
+    </p><br>
+<hr></hr>
+<h1 class="nav">Login Info</h1>
+   EMAIL<input type="text" class="rabx"> 
+      CONFIRM EMAIL ADDRESS<input type="text" class="rabx" >
+         PASSWORD REQUIREMENTS<span style="text-indent:50%"><li>6-20 characters long</li>
+                                                             <li>Not the same as your SkyMiles number,email address or username</li>
+                                                             <li>no special characters or non-english characters</li></span>
+           *PASSWORD<input type="password" class="rabx">
+              *CONFIRM PASSWORD<input type="password" class="rabx"><br><br>
+                  Create a Username<p>Username cannot contain speial characters and cannot be your email address or contain only numbers,must be unique and atleast 6 characters long</p>
+                     USERNAME<input type="text" class="rabx"><br><br>
+                         Establish Security Questions<br>
+                        *QUESTION1 <select class="rabx">
+                                    <option value="question1">select One</option>
+                                    <option value="question1">whats yours fisrt pet name</option>
+                                    <option value="question1">who is your favourite freedom fighter</option>
+                                    </select>
+                *ANSWER<input type="text" class="rabx"><br><br>
+   
+         *QUESTION2 <select class="rabx">
+                    <option value="question2">select One</option>
+                    <option value="question2">who is your childhood friend</option>
+                    <option value="question2">The first holiday place you visit</option>
+                    </select>
+    *ANSWER<input type="text" class="rabx">
+   
+<hr></hr>
+<h1 class="nav1">Contact Info</h1>
+   <p>PRIMARY MAILING ADDRESS</p>
+        *COUNTRy<select class="rabx">
+                    <option value="country">country</option>
+                    <option value="usa">unitedstates</option>
+                </select>
+            *ADDRESS TYPE<select class="rabx">
+                               <option value="address">select One</option>
+                         </select>
+                <br><br>
+                     *ADDRESS LINE1<input type="text" class="rabx">
+                         ADDRESS LINE2<input type="text" class="rabx"><br><br>
+                            *CITY<input type="text" class="rabx">
+                                 *STATE/PROVINCE<select class="rabx">
+                                                 <option value="Select one">Select one</option>
+                                                </select>
+                                  *POSTAL CODE<input type="text" class="rabx"><br><br>
+                        <p class="spa">*DEVICE TYPE <select class="rabx">
+	                                                  <option>Select One</option>
+                                                     </select>
+                    *COUNTRY CODE<select class="rabx">
+	                              <option>United States1</option>
+                                  </select>
+                *AREA CODE<input type="number" class="rabx">
+            *PHONE NUMBER<input type="number" class="rabx">
+        </p>
+ <hr></hr>
+<h1 class="nav1">Language Preference</h1><br><br>
+                   <p>This section defines the language displayed when u visit. We will also send communcations to you in your selected language when possible.</p>
+             *LANGUAGE<select class="rabx">
+	              <option>English</option>
+	              <option>Spanish</option>
+	               <option>French</option>
+                   </select><br><br>
+     </div>
+<div class="bor">
+    <span class="toplf">NOTIFICATION PREFERENCE</span>
+        <hr></hr>
+           <p>Stay in the know when it comes to your travel.Select the notification you'd like to recieve from us .See <span class="col">Privacy Policy</span></p>
+              <hr></hr><br><br>
+                  <h2 class="nav2">Flight Updates and Special Notifications</h2>
+                       BEFORE YOU FLY UPDATES<p>Stay informed about any changes to your flight ,from 2 months out to 2 days before your trip<button class="green">SELECTED</button></p><br><br>
+
+                            CONTACT MEAT  <select>
+	                                       <option>Select One</option>
+                                          </select>
+                                    <p class="spa">Add or Update this selection at any time by visting my profile</p><br><br>
+                                                LAST-MINUTE UPDATES <br>Get updates about flights or gate changes closer to your flight.<br>For irregular operations ,we'll try all contact information ,regardless of your preference<button class="green"> SELECTED </button><br><br>
+                                        CONTACT MEAT <select>
+	                                                  <option>Select One</option>
+                                                      </select>
+                                <p class="spa">Add or Update this selection at any time by visting my profile</p><br><br>
+                    YOUR FLIGHT REMINDERS <br>Be reminded when you're able to check in,and get the current status of your flight via email.<button class="green">SELECTED</button><br><br><br><br>
+        NEWS AND SPECIAL OFFERS<br>Subscribe now and stay up to date on special offers,promotions ,travel and SkyMiles information via email.<button id="blu">SELECT</button>
+
+</div>
+</body>
+</html>
