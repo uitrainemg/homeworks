@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paypal with css</title>
+ <style type="text/css">
+     li{
+       display: inline;
+       }
+	 .border{
+                border-radius: 5px;
+		border: 1px solid black;
+		background-color:  blue;
+		margin-left: 1px;
+		margin-right: 1000px;
+		margin-top: 6%;
+                text-align: center;
+		padding:20px;
+                 }
+     #border1{
+      	      border-radius: 5px;
+	      border: 1px solid black;
+              background-color:  blue;
+	      margin:-16% 45% -35% 400px;
+	      padding-bottom: -10px;
+	      padding-top: -40px;
+	      text-align: center;
+              }
+      #border2{
+      	       border-radius: 5px;
+	       border: 1px solid blue;
+	       background-color:  blue;
+	       margin:19% 15% -20% 800px;
+	       text-align: center;
+               padding: 25px;
+               }
+.radius{
+       border-radius: 7px;
+       padding: 5px;
+       }
+    .rad{
+      	 border-radius: 7px;
+      	 width:60px;
+         }
+     #click{
+           margin-left: 100px;
+           }
+        #click1{
+        	margin-left: 350px;
+               }
+           #click2{
+        	  margin-left: 900px;
+                  }
+
+</style>
+</head>
+ <body>
+ <h1>Paypal using css</h1>
+    <li><input type="radio" name="radio">Credit\Debit Card</li>
+    <li><input type="radio" name="radio">Pay Pal</li>
+    <li><input type="radio" name="radio">Gift Card</li><br><br><br>
+<div class="border">
+    <li><input type="radio" name="radio">Credit</li>
+    <li><input type="radio" name="radio">Debit</li><br><br><br>
+        <input type="text" class="radius"><br><br>
+              <select name="option" class="rad">
+                   <option>option</option>
+                   <option>option1</option>
+                   <option>option2</option>
+              </select>
+          <select name="option" class="rad">
+               <option>option</option>
+               <option>option1</option>
+               <option>option2</option>
+          </select>
+      <input type="text" class="rad"><br><br>
+    <input type="text" class="radius">
+</div>
+
+<div id="border1">
+   <h2>Pay Pal</h2>
+       <input type="text" class="radius"><br><br>
+       <input type="text" class="radius"><br><br>
+       <img src="../images/paypal.jpg" alt="paypal image" >
+</div>
+ 
+<div id="border2">
+    <h2>Gift Card</h2>
+        <input type="text" class="radius"><br><br>
+        <input type="text" class="radius">
+</div><br><br>
+
+<a href="http://www.w3schools.com/html/html_links.asp" id="click">addmore</a>
+<a href="http://www.w3schools.com/html/html_links.asp" id="click1">addmore</a>
+<a href="http://www.w3schools.com/html/html_links.asp" id="click2">addmore</a>
+
+</body>
+</html>
