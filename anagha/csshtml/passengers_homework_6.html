@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passengers</title>
+	<style type="text/css">
+	body {
+     margin: 10px;
+ 	}
+ 	.container {
+   		min-width: 900px;
+	}
+	table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    #inputtext {
+    	padding  :10px;
+    }
+    #outputtext{
+    	padding  :10px;	
+    }
+    th {
+        height:30px;
+    }
+    caption{
+    	text-align: left;
+    }
+
+    .hidecls{
+    	display:none;
+    }
+   table#t01 tr:nth-child(even) {
+    	background-color: #eee;
+    }
+	table#t01 tr:nth-child(odd) {
+   		background-color:#8FBC8F;
+	}
+	table#t01 th	{
+    	background-color: blue;
+    	color: white;
+	}
+	button {
+		background-color: blue;
+		color: white;
+	}
+	#tlbinput {
+		background-color: #eee;
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+<h2>Passengers</h2>
+
+<div id="inputtext">
+
+<table id="tlbinput">
+<tr>
+<td><label>First Name:</label></td> <td><input type="text" name="fname"></td>
+</tr>
+<tr>
+<td><label>Last Name:</label> </td><td><input type="text" name="lname"></td>
+</tr>
+<tr>
+<td><label>Date Of Birth:</label></td><td> <input type="date" name="bday"></td>
+<tr>
+<td><label>Frequent Flyer</label></td><td><input type="text" name="flyer"></td>
+</tr>
+<tr><td><label>Meal Type</label>
+<td><select name="meals">
+			<option value="veg">Veg</option>
+			<option value="vegan">Vegan</option>
+			<option value="meat">Meat</option>
+			<option value="kosher">Kosher</option>
+			</select>
+		</td>
+</tr>
+<tr>
+<td><label>City</label></td>
+<td><input type="text" name="city"></td>
+</tr>
+<tr>
+<td><label>State</label></td>
+<td><input type="text" name="state"></td>
+</tr>
+<tr>
+<td><label>Country</label></td>
+<td><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+</tr>
+<tr>
+	<td colspan="2"><button name="btnadd">Add</button>
+	<button name="btnupdate">Update</button></td>
+</tr>
+</table>
+</div>
+<div id="outputtext">
+<table id="t01">
+	<tr>
+	    <th></th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>DOB</th>
+		<th>Frequent Flyer #</th>
+		<th>Meals Type</th>
+		<th class="hidecls">City</th>
+		<th class="hidecls">State</th>
+		<th class="hidecls">Country</th>
+		<th>Delete</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="pid1"></td>
+		<td>Joe</td>
+		<td>Smith</td>
+		<td>10/10/1976</td>
+		<td>AJ880909</td>
+		<td>Veg</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#">delete</a></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="pid2"></td>
+		<td>Clara</td>
+		<td>Jones</td>
+		<td>1/12/1997</td>
+		<td>BHSL890r893</td>
+		<td>Vegan</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#">delete</a></td>
+	</tr>	
+	<tr>
+		<td><input type="checkbox" name="pid3"></td>
+		<td>Will</td>
+		<td>Black</td>
+		<td>2/2/1977</td>
+		<td>VKJS78979</td>
+		<td>Veg</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#">delete</a></td>
+	</tr>	
+</table>
+</div>
+</body>
+</html>
