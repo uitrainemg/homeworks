@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passengers</title>
+	<style type="text/css">
+	body {
+     margin: 10px;
+ 	}
+ 	.container {
+   		margin-left: 10px;
+	}
+	table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    #inputtext {
+    	padding  :10px;
+    }
+    #outputtext{
+    	padding  :10px;	
+    }
+    th {
+        height:30px;
+    }
+    caption{
+    	text-align: left;
+    }
+
+    .hidecls{
+    	<!--display:none;-->
+    }
+   table#tlboutput tr:nth-child(even) {
+    	background-color: #eee;
+    }
+	table#tlboutput tr:nth-child(odd) {
+   		background-color:#8FBC8F;
+	}
+	table#tlboutput th	{
+    	background-color: blue;
+    	color: white;
+	}
+	button {
+		background-color: blue;
+		color: white;
+	}
+	#tlbinput {
+		background-color: #eee;
+	}
+	</style>
+	<script src="../js/passenger.js"></script>
+</head>
+<body>
+<div class="container">
+<h2>Passengers</h2>
+
+<div id="inputtext">
+
+<table id="tlbinput">
+<tr>
+<td><label for="lbfname">First Name:</label></td> <td><input type="text" id="fname"></td>
+</tr>
+<tr>
+<td><label for="lblname">Last Name:</label> </td><td><input type="text" id="lname"></td>
+</tr>
+<tr>
+<td><label for="lbdob">Date Of Birth:</label></td><td> <input type="date" id="bday"></td>
+<tr>
+<td><label for="lbflyer">Frequent Flyer</label></td><td><input type="text" id="flyer"></td>
+</tr>
+<tr><td><label for="mealtype">Meal Type</label>
+<td><select id="mealtype">
+			<option value="Veg">Veg</option>
+			<option value="Vegan">Vegan</option>
+			<option value="Meat">Meat</option>
+			<option value="Kosher">Kosher</option>
+			</select>
+		</td>
+</tr>
+<tr>
+<td><label for="city">City</label></td>
+<td><input type="text" id="city"></td>
+</tr>
+<tr>
+<td><label for="country">Country</label></td>
+<td><select id="country" onchange="getStateNames()">
+			<option value="USA">USA</option>
+			<option value="Canada">Canada</option>
+			<option value="India">India</option>
+			</select></td>
+</tr>
+<tr>
+<td><label for="state" id="statelabel">State</label></td>
+<td><select id="state">
+			<option value="NY">New York</option>
+			<option value="TX">Texas</option>
+			<option value="FL">Florida</option>
+			<option value="DEL">Delaware</option>
+			<option value="CA">California</option>
+			</select></td>
+</tr>
+
+<tr>
+	<td colspan="2"><button name="btnadd" onclick="addPassenger()">Add</button>
+	<button name="btnupdate" onclick="updatePassenger()">Update</button><button name="btndelete" onclick="deletePassenger()">Delete</button></td>
+</tr>
+</table>
+</div>
+
+<div id="outputtext">
+<table id="tlboutput">
+	<tr>
+	    <th></th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>DOB</th>
+		<th>Frequent Flyer #</th>
+		<th>Meals Type</th>
+		<th class="hidecls">City</th>
+		<th class="hidecls">State</th>
+		<th class="hidecls">Country</th>
+		<th>View/Edit</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="checkdel"></td>
+		<td>Joe</td>
+		<td>Smith</td>
+		<td>10/10/1976</td>
+		<td>AJ880909</td>
+		<td>Veg</td>
+		<td class="hidecls">Plainview</td>
+		<td class="hidecls">USA</td>
+		<td class="hidecls">Florida</td>
+		<td><a name="editlink" href="#" onclick="loadPassenger(this)">View/Edit</a></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="checkdel"></td>
+		<td>Clara</td>
+		<td>Jones</td>
+		<td>1/12/1997</td>
+		<td>BHSL890r893</td>
+		<td>Vegan</td>
+		<td class="hidecls">Greenville</td>
+		<td class="hidecls">Canada</td>
+		<td class="hidecls">Ontario</td>
+		<td><a name="editlink" href="#" onclick="loadPassenger(this)">View/Edit</a></td>
+	</tr>	
+	</table>
+</div>
+</div>
+</body>
+</html>
