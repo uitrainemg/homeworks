@@ -78,6 +78,7 @@
         <table>
              
                     <tr>
+                       <th></th>      
                        <th>First Name</th>
                        <th>Last Name</th>
                        <th>DOB</th>
@@ -86,8 +87,10 @@
                        <th class="hide">City</th>
                        <th class="hide">State</th>
                        <th class="hide">Country</th>
+                       <th>view</th>
                      </tr>
                                                    <tr class="clr">
+                                                       <td>input ytpe="checkbox"</td>
                                                        <td>Joe</td>
                                                        <td>Smith</td>
                                                        <td>1/1/1980</td>
@@ -96,6 +99,7 @@
                                                        <td class="hide">Atlanta</td>
                                                        <td class="hide">GA</td>
                                                        <td class="hide">USA</td>
+                                                       <td><a>view</a><a>edit</a></td>
                                                     </tr>
                                                        
 

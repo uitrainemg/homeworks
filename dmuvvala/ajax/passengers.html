@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Table</title>
+	<style>
+	 table {
+   		 border-collapse: collapse;
+   		}
+   		</style>
+   		<script type="text/javascript">
+   		function addPassenger()
+   		{
+   			var table = document.getElementById("mytab");
+    		var row = table.insertRow(table.rows.length);
+    		var cell1 = row.insertCell(0);
+    		var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+    		cell1.innerHTML = '<input type="checkbox"/>';
+    		cell2.innerHTML = '<a href="#" onclick="loadUser(event)">'+document.getElementById('fname').value + '<a>';
+        cell3.innerHTML = document.getElementById('lname').value;
+   		}
+
+
+      function loadUser(event)
+      {
+        var index = event.srcElement.parentElement.parentElement.rowIndex;
+        var table = document.getElementById("mytab");
+        var row = table.children[0].children[index];
+        document.getElementById('fname').value = row.children[0].children[index].children[1].children[0].innerHTML;
+      }
+
+    /*  function onCountryChange()
+      {
+        var country = document.getElementById("country").value;
+        var stateCombo = document.getElementById("state");
+        for(var i=stateCombo.options.length;i>=0;i--)
+          {
+            stateCombo.remove(i);
+          }
+      var statelabel = document.getElementById("statelabel");
+        if(country==="USA")
+        {
+          statelabel.innerHTML = "State :";
+            stateCombo.options[0] = new Option("New York","NY");
+            stateCombo.options[1] = new Option("California","CA");
+            stateCombo.options[2] = new Option("Texas","NY");
+            stateCombo.options[3] = new Option("Georgia","GA");
+            stateCombo.options[4] = new Option("Massachusettes","MA");
+        }
+        else if(country==="CA")
+        {
+         
+          statelabel.innerHTML = "Province :";
+            stateCombo.options[0] = new Option("Quebec","QB");
+            stateCombo.options[1] = new Option("Ontario","ON");
+            stateCombo.options[2] = new Option("British Columbia","BC");
+            stateCombo.options[3] = new Option("Alberta","AL");
+            stateCombo.options[4] = new Option("Nova Scotia","NS");
+        }
+        else
+        {
+          statelabel.innerHTML = "State :";
+            stateCombo.options[0] = new Option("N/A","NA");
+        }
+      } */
+
+      function onCountryChange()
+      {
+        var country   = document.getElementById('country').value;
+        var request  = new XMLHttpRequest();
+        var stateCombo = document.getElementById("state");
+        for(var i=stateCombo.options.length;i>=0;i--)
+          {
+            stateCombo.remove(i);
+          }
+        request.open('GET','http://localhost:3000/getStates?country='+country);
+        request.send();
+        request.onreadystatechange = function()
+        {
+          if(request.readyState===4 && request.status===200)
+          {
+             console.log(request.responseText);
+            var states = JSON.parse(request.responseText);
+            states.forEach(function(element ,index){
+                 stateCombo.options[stateCombo.options.length] = new Option(element.name,element.short);
+            })
+            
+          }
+        }
+      }
+
+   		</script>
+</head>
+<body>
+First Name : <input type="text" id = "fname"/><br/><br/>
+Last Name : <input type="text" id = "lname"/><br/><br/>
+Country : <select id="country" onchange="onCountryChange()">
+      <option value="USA"> United States</option>
+       <option value="CA"> Canada</option>
+       <option value="IN"> India</option>
+</select><br/><br/>
+<label for="state" id="statelabel">State :</label> <select id="state">
+      <option value="NY"> New York</option>
+       <option value="CA"> California</option>
+       <option value="TX"> Texas</option>
+       <option value="GA"> Georgia</option>
+       <option value="IL"> Illinois</option>
+       <option value="MA"> Massachusettes</option>
+</select><br/><br/>
+<input type="button" value="Add" onclick="addPassenger()" /> <br/><br/>
+<table id= "mytab" border=1>
+<tr>
+  <th>
+  </th>
+	<th>
+		First Name
+	</th>
+	<th>
+		Last Name
+	</th>
+</tr>
+<tr>
+<td> <input type="checkbox"></td>
+	<td> Joe</td>
+	<td> Smith</td>
+</tr>
+</table>
+
+
+</body>
+</html>

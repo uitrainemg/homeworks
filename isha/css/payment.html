@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+      #crdr{
+      	display: inline-block;
+      	height: 200px;
+      	width: 30%;
+      	padding: 5px;
+      	background-color: lightblue;
+      	border: 3px solid black;
+      	box-sizing: border-box;
+      	float: left;
+      	margin-top: 10px;
+      }
+      #paypal{
+      	height: 200px;
+      	width: 30%;
+      	padding: 5px;
+      	background-color: lightblue;
+      	border: 3px solid black;
+      	box-sizing: border-box;
+      	float: left;
+      	margin-left: 10px;
+      	margin-top: 10px;
+      }
+      #giftcard{
+      	height: 200px;
+      	width: 30%;
+      	padding: 5px;
+      	background-color: lightblue;
+      	border: 3px solid black;
+      	box-sizing: border-box;
+        float: left;  
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      #buttonimg{
+      	width:60px; 
+      	height:23px; 
+      	border-radius: 8px;
+      	border: 1px solid black;
+      	position: absolute;
+      	text-align: center;
+      }
+      input{
+      	border: 1px solid black;
+      }
+      select{
+      	border: 1px solid black;
+      }
+      </style>
+</head>
+<body>
+	<h1>Payment Method</h1></br>
+    <div id="payment">
+         <input type="radio" value="CR/DEcard" name="card">Credit/Debit Card</input>
+         <input type="radio" value="paypal" name="card">Paypal</input>
+         <input type="radio" value="giftcard" name="card">Gift Card</input>
+     </div></br>
+     <div id="crdr">
+          <input type="radio" value="creditcard" name="card">Credit</input>
+          <input type="radio" value="debitcard" name="card">Debit</input></br></br>
+          <input type="text" size="30"/></br></br>
+          <select>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+          </select>      
+          <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+          </select>
+          <input type="number" size="4" name="cvv"/></br></br>
+          <input type="text" size="30"/></br>
+     </div>
+     <div id="paypal">
+     	<h1>Paypal</h1>
+     	<input type="text" size="30"/></br></br>
+     	<input type="text" size="30"/></br></br>
+        <input id="buttonimg" type="image" src="ppsubmit.png" alt="Submit" width="48" height="48">
+     </div>
+     <div id="giftcard">
+          <h1>Gift Card</h1>
+     	<input type="text" size="35"/></br></br>
+     	<input type="text" size="30"/></br></br>
+     </div>
+</body>
+</html>
