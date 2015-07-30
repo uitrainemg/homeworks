@@ -5,7 +5,7 @@ var app = http.createServer(function(req,res){
 	var url_parts = url.parse(req.url, true);
 	var query = url_parts.query;
 	res.setHeader('Content-Type','application/json');
-	//res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Origin", "*");
 	//get query strig
 	// get country param
 	// if country is usa then send us states
