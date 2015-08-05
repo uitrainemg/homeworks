@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Current Weather Forcast</title>
+<script>
+var collect = [];
+
+function getWeatherDetails() {
+	var str = document.getElementById("zipcode").value;
+	var flag = false;
+
+    if(collect.length > 0){
+    	flag = eleContainsInArray(collect,str);
+	}
+
+    if (str.length == 0) {
+        document.getElementById("txtHint").value= "";
+        return;
+    } 
+    else if(flag == true){
+    	alert("City with this Zipcode already exits.");
+    }   else {
+    var xmlhttp = new XMLHttpRequest();
+
+    var url="http://api.apixu.com/v1/forecast.json?key=87269ce8ca1a43a799e203852153107&q=" + str+"&days=1";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    xmlhttp.onreadystatechange = function() {
+       	
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            collect.push(str);
+            createDiv(myArr.location.name,myArr.current.condition.icon,myArr.current.temp_f,myArr.current.condition.text,myArr.forecast.forecastday[0].day.maxtemp_f,myArr.forecast.forecastday[0].day.mintemp_f);
+
+        }
+        }
+    }
+}	
+
+
+function eleContainsInArray(arr,element){
+    if(arr != null && arr.length >0){
+        for(var i=0;i<arr.length;i++){
+            if(arr[i] == element)
+                return true;
+        }
+    }
+    return false;
+ } 
+function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
+	var divTag = document.createElement("div");
+	divTag.id = "div1";
+	divTag.setAttribute("align","left");
+	divTag.style.border = "2px solid black";
+	divTag.style.width ="170px";
+	divTag.style.height ="180px";
+	divTag.style.background = "#77a4d4";
+	divTag.style.display = 'inline-block';
+	divTag.style.margin="10px";
+
+
+	var imgCloseTag = document.createElement("img");
+    imgCloseTag.id = "img1";
+    imgCloseTag.setAttribute("src","../image/close.jpg");
+    imgCloseTag.style.float = 'right';
+    imgCloseTag.style.margin = '0px 0px 5px 5px';
+    
+
+	var p1Tag = document.createElement("div");
+	p1Tag.style.float = 'left';
+	p1Tag.id ="p1";
+	p1Tag.style.fontSize="25px";
+	var t = document.createTextNode(name);
+    p1Tag.appendChild(t);
+    p1Tag.appendChild(imgCloseTag);
+    
+  
+    var hrTag =document.createElement("hr");
+    hrTag.style.clear = 'both';
+    hrTag.setAttribute("color","black");
+    hrTag.setAttribute("size","5");
+
+    var imgTag = document.createElement("img");
+    imgTag.setAttribute("src",icon);
+    imgTag.style.float = 'left';
+
+	var p2Tag = document.createElement("div");
+	p2Tag.id ="p2";
+	var t1 = document.createTextNode(tempf);
+	p2Tag.style.float = 'left';
+	p2Tag.style.fontWeight="bold";
+	p2Tag.style.fontSize="20px";
+
+	var p3Tag = document.createElement("span");
+	p3Tag.id ="p3";
+	p3Tag.style.fontWeight="bold";
+	p3Tag.style.clear = 'left';
+	p3Tag.style.marginLeft = '55px';
+	p3Tag.style.fontSize="20px";
+	p3Tag.style.marginTop = '0px';
+	var t2 = document.createTextNode(condition);
+	p2Tag.appendChild(p3Tag);
+
+	var hr1Tag =document.createElement("hr");
+	hr1Tag.style.clear = 'both';
+    hr1Tag.setAttribute("color","black");
+    hr1Tag.setAttribute("size","3");
+
+    var p4Tag = document.createElement("div");
+	p4Tag.setAttribute("align","center");
+	p4Tag.id ="p3";
+	p4Tag.style.fontSize="20px";
+	p4Tag.style.fontWeight="bold";
+	var t3 = document.createTextNode(maxtempf +" / " + mintemp_f);
+ 	p4Tag.appendChild(t3);
+
+	p3Tag.appendChild(t2);
+	p2Tag.appendChild(t1);
+    divTag.appendChild(p1Tag);
+    divTag.appendChild(imgCloseTag);
+    divTag.appendChild(hrTag);
+    divTag.appendChild(imgTag);
+    divTag.appendChild(p2Tag);
+    divTag.appendChild(p3Tag);
+    divTag.appendChild(hr1Tag);
+    divTag.appendChild(p4Tag);
+
+    var divContainer = document.getElementById('container');
+    divContainer.appendChild(divTag);
+}
+</script>	
+<style type="text/css">
+	
+body {
+ margin: 10px;
+	}
+</style>	
+</head>
+<div id="enter">
+<label for="zipcode">Zip code </label><input type="text" id="zipcode"/> <button name="btnadd" onclick="getWeatherDetails()">Add</button>
+</div>
+<br/><br/>
+<div id="container"></div>
+</body>
+</html>
