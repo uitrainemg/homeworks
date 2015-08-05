@@ -131,8 +131,8 @@ function getStateNames()
     var state = document.getElementById("state");
     var statelabel = document.getElementById("statelabel");
     var optionlength = state.options.length;
-    var i;
-    for(i=optionlength-1;i>=0;i--)
+    //var i;
+    for( var i=optionlength-1;i>=0;i--)
     {
         state.remove(i);
     }

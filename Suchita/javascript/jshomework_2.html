@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>passengers list</title>
+	<script type="text/javascript" src="../javascript/homework2.js"></script>
+	<style type="text/css">
+    table ,th,td{
+		border:1px solid black;
+		border-collapse: collapse;
+		text-align: center;
+		color:black;
+	    }
+    .hidden{
+		visibility: hidden;
+	}	
+	 #demo{
+          	width: 600px;
+          	height: 100px;
+          }
+
+	</style>
+</head>
+<body>
+     <h1 style="text-align:center">Passengers</h1>
+<div  style="width:50%;margin:auto; ">
+	<label for="fname">First Name*</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name*</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="dob">DOB*</label><br>
+    <input type="date" id="dob" name="dob"><br>
+        <label>Meals Type</label><br>
+        <select type="meals" id="mealstype" >
+        <option>select</option>
+        <option> non-Veg </option>
+        <option> Vegan </option>
+        <option> Meat </option>
+        <option> KosherCountry </option>
+        </select></br>
+    <label for="country"> Country </label><br>
+        <select id= "country" onchange="onCountryChange()" >
+        
+        <option> USA </option>
+        <option> INDIA </option>
+        <option> CANADA </option>
+        </select> </br></br>   
+    <label for="state">state </label><br>
+     <select id= "state" >        
+        <option> newyork,NY </option>
+        <option> Texas,Tx </option>
+        <option> Florida,FL </option>
+        </select> </br></br>   
+     
+    
+    <button type="button" onclick="check()" style="margin:5px;margin-left:0px;">Add</button>
+    <button type="button" onclick="update()" style="margin:5px;">Update</button>
+    <button type="button" onclick="deletep()" style="margin:5px;">Delete</button>
+
+</div>
+
+	<table id="passangers" align="center" style="width:50% ">
+		<tr>
+			<th></th>
+			<th>FIRST NAME</th>
+			<th>LAST NAME</th>
+			<th>DOB</th>
+			
+			<th>MEAL TYPE</th>
+			<th>VIEW</th>
+			<th >country</th>
+			<th >state</th>
+			
+		</tr>
+		<tr>
+			<td><input id="checkboxes" type="checkbox"></td>
+			<td>joe</td>
+		    <td>smith</td>
+		    <td>2015-04-24</td>
+			<td>Vegan</td>
+			<td><a href="#" onclick="viewdetails(this)">view/edit</a></td>
+			<td >USA</td>
+			<td >Florida</td>
+			
+		</tr>
+		<tr>
+			<td><input id="checkboxes" type="checkbox"></td>
+			<td>clara</td>
+			<td>jones</td>
+			<td>2015-08-23</td>				
+			<td>non-Veg</td>
+			<td><a href="#" onclick="viewdetails(this)">view/edit</a></td>
+			<td>INDIA</td>
+			<td>U.P</td>
+			
+		</tr>
+		
+	</table>
+	
+	<p id="demo"></p>
+</body>
+</html>
