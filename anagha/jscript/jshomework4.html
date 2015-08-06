@@ -48,13 +48,20 @@ function eleContainsInArray(arr,element){
     }
     return false;
  } 
+
+ function closeDiv(divid){
+    //alert(divid);
+    document.getElementById(divid).style.display = 'none';
+    //document.getElementById(divid).style.visibility = 'hidden';
+}
+
 function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
 	var divTag = document.createElement("div");
-	divTag.id = "div1";
+	divTag.id = "div"+name;
 	divTag.setAttribute("align","left");
 	divTag.style.border = "2px solid black";
-	divTag.style.width ="170px";
-	divTag.style.height ="180px";
+	divTag.style.width ="auto";
+	divTag.style.height ="auto";
 	divTag.style.background = "#77a4d4";
 	divTag.style.display = 'inline-block';
 	divTag.style.margin="10px";
@@ -65,7 +72,8 @@ function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
     imgCloseTag.setAttribute("src","../image/close.jpg");
     imgCloseTag.style.float = 'right';
     imgCloseTag.style.margin = '0px 0px 5px 5px';
-    
+   //imgCloseTag.addEventListener("click",closeDiv(divTag.id), false);
+   //not working
 
 	var p1Tag = document.createElement("div");
 	p1Tag.style.float = 'left';
@@ -75,17 +83,18 @@ function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
     p1Tag.appendChild(t);
     p1Tag.appendChild(imgCloseTag);
     
-  
     var hrTag =document.createElement("hr");
     hrTag.style.clear = 'both';
     hrTag.setAttribute("color","black");
     hrTag.setAttribute("size","5");
 
+    var middleTag = document.createElement("div");
+    middleTag.id="mline";
     var imgTag = document.createElement("img");
     imgTag.setAttribute("src",icon);
     imgTag.style.float = 'left';
 
-	var p2Tag = document.createElement("div");
+	var p2Tag = document.createElement("span");
 	p2Tag.id ="p2";
 	var t1 = document.createTextNode(tempf);
 	p2Tag.style.float = 'left';
@@ -93,14 +102,18 @@ function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
 	p2Tag.style.fontSize="20px";
 
 	var p3Tag = document.createElement("span");
+    p3Tag.style.display = 'block';
 	p3Tag.id ="p3";
 	p3Tag.style.fontWeight="bold";
-	p3Tag.style.clear = 'left';
-	p3Tag.style.marginLeft = '55px';
+    p2Tag.style.float = 'left';
+
 	p3Tag.style.fontSize="20px";
 	p3Tag.style.marginTop = '0px';
 	var t2 = document.createTextNode(condition);
-	p2Tag.appendChild(p3Tag);
+
+    middleTag.appendChild(imgTag);
+    middleTag.appendChild(p2Tag);
+    middleTag.appendChild(p3Tag);
 
 	var hr1Tag =document.createElement("hr");
 	hr1Tag.style.clear = 'both';
@@ -120,14 +133,11 @@ function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
     divTag.appendChild(p1Tag);
     divTag.appendChild(imgCloseTag);
     divTag.appendChild(hrTag);
-    divTag.appendChild(imgTag);
-    divTag.appendChild(p2Tag);
-    divTag.appendChild(p3Tag);
+    divTag.appendChild(middleTag);
     divTag.appendChild(hr1Tag);
     divTag.appendChild(p4Tag);
 
-    var divContainer = document.getElementById('container');
-    divContainer.appendChild(divTag);
+   document.body.appendChild(divTag);
 }
 </script>	
 <style type="text/css">
@@ -141,6 +151,6 @@ body {
 <label for="zipcode">Zip code </label><input type="text" id="zipcode"/> <button name="btnadd" onclick="getWeatherDetails()">Add</button>
 </div>
 <br/><br/>
-<div id="container"></div>
+
 </body>
 </html>
