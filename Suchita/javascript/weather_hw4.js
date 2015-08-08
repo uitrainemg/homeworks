@@ -18,6 +18,7 @@ var j=0;
 
 function addmore(loca,tf,conditn,mm,pic){
     i+=1;
+    document.getElementById("div1").style.display="inline";
     var elmnt = document.getElementsByTagName("div")[0];
     var cln = elmnt.cloneNode(true);
     document.body.appendChild(cln).style.float='left';
@@ -26,7 +27,9 @@ function addmore(loca,tf,conditn,mm,pic){
     document.getElementsByTagName("p")[3+j].innerHTML=conditn;
     document.getElementsByClassName("img1")[i-1].innerHTML=pic;
     document.getElementsByTagName("p")[4+j].innerHTML=mm;
+    var zip=document.getElementById("zipcode").innerHTML=" "; 
     j=j+4;
+    //alert(i);
 
     if(i==1){
         var d=document.getElementsByTagName("div")[4];
@@ -50,4 +53,7 @@ function zipcodecheck(){
 function close2(a){
      var x = a.parentNode.parentNode;
      x.parentNode.removeChild(x);
+}
+function dis(){
+    document.getElementById("div1").style.display="none";
 }
