@@ -72,7 +72,7 @@ function createDiv(name,icon,tempf,condition,maxtempf,mintemp_f){
     imgCloseTag.setAttribute("src","../image/close.jpg");
     imgCloseTag.style.float = 'right';
     imgCloseTag.style.margin = '0px 0px 5px 5px';
-   //imgCloseTag.addEventListener("click",closeDiv(divTag.id), false);
+   imgCloseTag.addEventListener("click",function(){closeDiv(divTag.id);}, false);
    //not working
 
 	var p1Tag = document.createElement("div");
