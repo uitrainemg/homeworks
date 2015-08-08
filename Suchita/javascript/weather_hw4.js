@@ -47,7 +47,7 @@ function zipcodecheck(){
     }
 }
 
-function close(a){
-     var x = document.getElementById(a).nodeName;
-     alert(x);
+function close2(a){
+     var x = a.parentNode.parentNode;
+     x.parentNode.removeChild(x);
 }
