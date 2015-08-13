@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TABLE INFO</title>
+<script type="text/javascript" src="../jsexamples/table.js"></script>
+<style type="text/css">
+table{
+		border-radius: 10px;
+	    border:2px solid black;
+	    width:100%;
+	    padding:25px;
+	}
+th{ 
+		border-radius: 5px;
+		padding: 30px;
+		border:1px solid #990000;
+		background-color: #990000; 
+		color: white;
+		font-family: serif;
+    }
+td{
+	border-radius: 5px;
+	padding: 20px;
+	border:1px solid #996600;
+}
+                                                     button{
+                                                     	background-color: gray;
+                                                     	padding: 5px;
+                                                     	padding-right: 30px
+                                                     } 
+                                                          .hide{
+                                                          	display: none;
+                                                          }
+                                                     
+
+                                     .radius{
+										    border-radius: 5px;
+										   	 padding:5px;
+										     }
+					 .clrcg{
+					 	    background-color: #383838;
+					 	    color: white;
+					 	    font-family: serif;
+					       }
+		.clr{
+			background-color: #680000;
+		 	color: white;
+		 	font-family: sans-serif;
+            }
+
+</style>
+
+
+</head>
+<body>
+    <div>
+    
+   
+          <label for = "fname"> First Name</label> 
+            <a href = "#" id="namef"><input type="text"  id="fname" class="radius" ></a><br><br>
+          <label for = "lname"> Last Name</label> 
+            <input type="text" id="lname" class="radius"><br><br>
+          <label for="dob" >DOB </label>
+              <input type="date()" id="dob" class="radius"><br><br>
+          <label for = "frequentflyer"> Frequent Flyer</label>.
+               <input type="text" id="frequentflyer"class="radius"><br><br>
+							<a class="hide"><label for = "meals">Meals</label>
+							 <select id="meals"class="radius",>
+							       <option value="veg">Veg</option>
+							       <option value="vegan">Vegan</option>
+							       <option value="meat">Meat </option>
+							   </select></a><br><br>
+		<label for = "country" >Country</label> 
+							<select  class="radius" onchange = 'countryChange();'  value = 'country'id="country">
+							       <option value="country">country</option>
+								   <option value="CA">CA</option>
+								   <option value="USA">USA</option>
+								   <option value="INDIA">INDIA</option>
+							</select><br><br>
+        <label for= 'state'>State</label><select id="state" name ='state'>
+        <option value="state">state</option>
+        <option value="NY">NewYork</option>
+        <option value="CO">Colorado</option>
+        <option value="IL">Illniose</option>
+        </select><br/><br/>
+
+        
+        <label for="city">City</label>
+                 <input type="text" id="city" class="radius"><br><br>
+        <label for="zipcode">Zipcode</label> 
+                 <input type="number" id="zipcode" class="radius"><br><br>
+       <button onclick="adding()">Add</button>
+       <button onclick="updating(event)">Update</button>
+       <button onclick="deleting()">Delete</button>
+
+         
+   </div><br><br>
+        <table id="myTable">
+        
+             
+                    <tr>
+                       <th></th>
+                       <th>First Name</th>
+                       <th>Last Name</th>
+                       <th>DOB</th>
+                       <th>Frequent Flyer #</th>
+                       <th>Meal Type</th>
+                       <th class="hide">Country</th>
+                       <th class="hide">State</th>
+                       <th class="hide">City</th>
+                       <th class="hide">Zipcode</th>
+                       <th>View</th>
+                       </tr>
+               <tbody>
+                      <tr class="clr">
+                      <td><input type="checkbox" id = "chkbox"></td>
+                      <td>Joe</td>
+                      <td>Smith</td>
+                      <td>1980-12-1</td>
+                      <td>AAAwz</td>
+                      <td>meat</td>
+                      <td class="hide">USA</td>
+                      <td class="hide">Georiga</td>
+                      <td class="hide">Atlanta</td>
+                      <td class="hide">30005</td>
+                      <td ><a href='#' class = "Edit" onclick="load(event)">edit</a></td>
+                      </tr>
+                                                       
+
+                                                   
+                      <tr class="clrcg">
+                      <td><input type="checkbox" id = "chkbox"></td>
+					  <td>Clara</td>
+					  <td>Jones</td> 
+					  <td>1987-11-2</td>
+					  <td>BSHL890</td>
+					  <td> vegan</td>
+					  <td class="hide">USA</td>
+					  <td class="hide">Colorodo</td>
+					  <td class="hide">Denver</td>
+					  <td class="hide">244567</td>
+		           <td ><a href='#' class = "Edit" onclick="load(event)" >edit</a></td>
+					</tr>
+													<tr class="clr">
+													<td><input type="checkbox" id = "tdchkbox"></td>
+													<td>Will</td>
+													<td>Black</td>
+													<td>1977-10-31</td>
+													<td>VKJS78</td>
+													<td>chicken</td>
+													<td class="hide">USA</td>
+													<td class="hide">IL</td>
+													<td class="hide">SpringField</td>
+													<td class="hide">28956</td>
+												  <td ><a href='#' class = "Edit" onclick="load(event)">edit</a></td>
+													</tr>
+							<tr class="clrcg">
+							<td><input type="checkbox" id = "chkbox"></td>
+							<td>Michal</td>
+							<td>Renold</td>
+							<td>1999-09-30</td>
+							<td>AWDC456</td>
+							<td>veg</td>
+							<td class="hide">India</td>
+							<td class="hide">Telangana</td>
+							<td class="hide">Hyderbad</td>
+							<td class="hide">67890</td>
+							<td ><a href='#' class = "Edit" onclick="load(event)" >edit</a></td>
+							</tr>
+		<tr class="clr">
+		<td><input type="checkbox" id = "chkbox"></td>
+		<td>Rose</td>
+		<td>Mary</td>
+		<td>2000-05-12</td>
+		<td>RDGGG340</td>
+		<td>Meat</td>
+		<td class="hide">India</td>
+		<td class="hide">AP</td>
+		<td class="hide">vizag</td>
+		<td class="hide">300004</td>
+	   <td ><a href='#' class = "Edit" onclick="load(event)">edit</a></td>
+		</tr>
+		</tbody>
+		</table>
+</body>
+</html>
