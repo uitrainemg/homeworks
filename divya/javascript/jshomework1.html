@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+
+</head>
+<body>
+<label for = "input">Input text</label><br/><br/>
+<textarea rows="8" cols="150" id ="input" > JavaScript also known as ECMAScript (the untradmarked name used for the standard), is a dynamic programming languages. [5] It is most commonly used as a part of web browsers, whose implementations allow client-side scripts to interact with the user , control the browser, communicate asynchronously, and alter the document content that is displayed . [5] Javascript (at least the strict subset asm.js) is also considered an "assembly language of the web" [6] a compile target of source-to-source compilers for making client side web applications, using other programming languages, supported by all the major browsers without plug-ins. It is also used in server-side network programming with runtime environments such as Node.js, game development and the creation of desktop and mobile application </textarea><br/><br/><br/><br/>
+<label for = "search">Search Text</label><br/><br/>
+<input type="text" name="searchtext" id="search"></input><br/><br/><br/><br/>
+
+<button onclick="stgsplt()"> Search</button>
+<p id="res1"></p>
+<script type="text/javascript">
+	function stgsplt(){
+		var x = document.getElementById("input").value;
+		var a = document.getElementById("search").value;
+	
+		var txtsplit = x.split(" ");
+		var c = a.replace(/ /g , " ");
+		var ssplit = c.split(",");
+		var slength = ssplit.length;
+		var tlength = txtsplit.length;
+		var count = 0;
+		var res2="";
+		var s="";
+		var res = "";
+		var res3="";
+		var pos = "";
+		for(i = 0 ; i < slength ; i++){
+        res = ssplit[i];
+        count = 0;
+        for(j = 0 ; j < tlength;)
+			{     
+		       pos = txtsplit.indexOf(ssplit[i] , j);
+		        if( pos != -1)
+		        {
+		        	res2 += pos;
+                    j += pos+1;
+                    count++;
+                    }
+                     else{
+                     break;
+                 }
+               }
+            
+ s +=  ssplit[i] + " "+":"  + "found" + " "+ count +" "+"time(s) at postion('s') "+" " + res2 + " " + "<br>";
+
+                res2 = 0;
+          }
+      document.getElementById("res1").innerHTML = s;
+
+        }
+		   
+		   		</script>
+</body>
+</html>
