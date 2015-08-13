@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table using bootstarp</title>
+	<link  rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	
+
+
+</head>
+<body>
+
+<div class="container">
+<form class="form-horizontal" role="form">
+<div class="form-group">
+    
+   <label  class="control-label col-sm-2" for = "fname"> First Name</label>
+   <div class="col-sm-5"><input type="text" class="form-control"></div><br><br>
+   <label class="control-label col-sm-2"for = "lname"> Last Name</label>
+   <div class="col-sm-5"><input type="text" class="form-control"></div><br><br>
+   <label class="control-label col-sm-2" for="dob" >DOB </label>
+   <div class="col-sm-5" class="glyphicon glyphicon-calender"><input type="date" class="form-control"></div><br><br>
+   <label class="control-label col-sm-2" for = "frequentflyer"> Frequent Flyer</label>
+   <div class="col-sm-5"><input type="text" class="form-control"></div><br><br>
+    <label   for = "meals" class="hide">Meals</label>
+	<select class="hide" class="form-control">
+				<option value="veg">Veg</option>
+				<option value="vegan">Vegan</option>
+				<option value="meat">Meat </option>
+			</select><br><br>
+	<label class="control-label col-sm-2" for = "country" >Country</label> 
+	<div class="col-sm-5"><select class="form-control">
+				<option value="country">country</option>
+				<option value="CA">CA</option>
+				<option value="USA" >USA</option>
+				<option value="INDIA">INDIA</option>
+			</select></div><br><br>
+    <label class="control-label col-sm-2" for= 'state' >State</label>
+      <div class="col-sm-5"><select name="state" class="form-control">
+        	<option>NewJersy</option>
+        	<option>NewYork</option>
+           </select></div><br/><br/>
+    <label class="control-label col-sm-2" for="city">City</label>
+     <div class="col-sm-5"><input type="text" class="form-control"></div><br><br>
+     <label  class="control-label col-sm-2" for="zipcode">Zipcode</label> 
+     <div class="col-sm-5"><input type="number" class="form-control"></div><br><br>
+       <button type="button" class="btn btn-success active">
+       	<span class="glyphicon glyphicon-plus"></span> ADD
+       </button>
+       <button type="button" class="btn btn-info active">
+       	<span class="glyphicon glyphicon-upload"></span> UPDATE
+       </button>
+       <button type="button" class="btn btn-danger active">
+       	<span class="glyphicon glyphicon-remove"></span> DELETE
+       </button><br><br>
+       <button type="button" class="btn btn-success disabled">
+       	<span class="glyphicon glyphicon-plus"></span> ADD
+       </button>
+       <button type="button" class="btn btn-info disabled">
+       	<span class="glyphicon glyphicon-plus"></span> UPLOAD
+       </button>
+       <button type="button" class="btn btn-danger disabled">
+       	<span class="glyphicon glyphicon-plus"></span> DELETE
+       </button>
+       </div>
+       </form>
+</div><br><br>
+
+        <table class="table table-bordered">
+                <tr class="danger">
+                       <th></th>
+                       <th>First Name</th>
+                       <th>Last Name</th>
+                       <th>DOB</th>
+                       <th>Frequent Flyer #</th>
+                       <th>Meal Type</th>
+                       <th class="hide">City</th>
+                       <th class="hide">State</th>
+                       <th class="hide">Country</th>
+                       <th>View</th>
+                </tr>
+
+                <tbody>
+                <tr class="warning">
+                      <td><input type="checkbox"></td>
+                      <td>Joe</td>
+                      <td>Smith</td>
+                      <td>1/1/1980</td>
+                      <td>AAAwz</td>
+                      <td>meat</td>
+                      <td class="hide">Atlanta</td>
+                      <td class="hide">GA</td>
+                      <td class="hide">USA</td>
+                      <td ><a href='#'>edit</a></td>
+                </tr>
+
+                <tr class="info">
+                      <td><input type="checkbox"></td>
+					  <td>Clara</td>
+					  <td>Jones</td> 
+					  <td>1/12/1987</td>
+					  <td>BSHL890</td>
+					  <td> vegan</td>
+					  <td class="hide">Denver</td>
+					  <td class="hide">Colorodo</td>
+					  <td class="hide">USA</td>
+					  <td ><a href='#'>edit</a></td>
+			    </tr>
+													
+		</tbody>
+		</table>
+
+</body>
+</html>

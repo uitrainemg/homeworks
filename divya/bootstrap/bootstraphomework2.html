@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrapexample</title>
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src= " jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src = " js/bootstrap.js"></script>
+<style>
+.carousel-inner > .item >img ,.carousel-inner>.item>a>img,.container{
+	width : 80%;
+	margin : auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div id="carouselex" class="carousel-slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carouselex" data-slide-to="0" class="active">
+<li data-target="#carouselex" data-slide-to="1"></li>
+<li data-target="#carouselex" data-slide-to="2"></li>
+<li data-target="#carouselex" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img   src="Chrysanthemum.jpg" alt="flowerimage">
+<div class="carousel-caption">
+<p>this a beautiful red flower</p>
+</div>
+</div>
+<div class="item">
+<img src="Desert.jpg" alt="desertimage">
+<div class="carousel-caption">
+<p >It is an desert with mountains</p>
+</div>
+</div>
+<div class="item">
+<img src="Hydrangeas.jpg" alt="flowersimage">
+<div class="carousel-caption">
+<p> it is an bunch of white flowers</p>
+</div>
+</div>
+<div class="item">
+<img src="Lighthouse.jpg" alt="lighthouse">
+<div class="carousel-caption">
+<p>Light house to help the people travelling in sea</p>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="carouselex" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">previous</span>
+</a>
+<a class="right carousel-control" href="carouselex" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">next</span>
+</a>
+</div>
+</div>
+</body>
+</html>
