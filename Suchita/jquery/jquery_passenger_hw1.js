@@ -46,8 +46,21 @@ $(document).ready(function(){
     $("#delbtn").click(function(){
      		deleter();
     });
+
    	$('#updbtn').click(function(){
-   		   updater();
+   		  var l=$('#passangers tr').length;
+        $('#passangers tr').each(function(i){
+                if($("#fname").val()==$(this).find('td:eq(1)').text() && $("#lname").val()==$(this).find('td:eq(2)').text() && $("#dob").val()==$(this).find('td:eq(3)').text()){
+                alert("cannot add");
+                return false;
+            }
+            else if($("#fname").val()=="" || $("#lname").val()=="" || $("#dob").val()==""){
+                alert("fields cannot be blank");
+                return false;
+            }
+            else if(i<l-1){return;}
+            else{updater();}
+        });
    	});
 
     	function requiredfields(firstname,lastname,dateOfBirth){
@@ -113,6 +126,7 @@ $(document).ready(function(){
     			$('#state :selected').val($(this).find('td:eq(7)').text());
     			
     		}
+            else{return;}
     	});
 
 	});
