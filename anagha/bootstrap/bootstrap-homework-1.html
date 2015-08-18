@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passengers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+<div class="container">
+
+<h2>Passengers</h2>
+<form class="form-horizontal" role="form">
+<div class="form-group">
+<label class="col-sm-2 control-label">First Name:</label>
+<div class="col-xs-4">
+<input type="text" class="form-control" name="fname">
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Last Name:</label> 
+<div class="col-xs-4">
+<input type="text"  class="form-control" name="lname">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label">Date Of Birth:</label>
+<div class="col-xs-4">
+<input type="date"  class="form-control" name="bday">
+</div>
+</div>
+ <div class="form-group">
+ <label class="col-sm-2 control-label">Frequent Flyer</label>
+ <div class="col-xs-4">
+ <input type="text"  class="form-control" name="flyer">
+ </div>
+ </div>
+ <div class="form-group">
+ <label class="col-sm-2 control-label">Meal Type</label>
+ <div class="col-xs-4">
+ <select name="meals"  class="form-control">
+			<option value="veg">Veg</option>
+			<option value="vegan">Vegan</option>
+			<option value="meat">Meat</option>
+			<option value="kosher">Kosher</option>
+			</select>
+</div>			
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label">City</label>
+<div class="col-xs-4">
+<input type="text"  class="form-control" name="city">
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label">State</label>
+<div class="col-xs-4">
+<input type="text"  class="form-control" name="state">
+</div>
+</div>
+ <div class="form-group">
+ <label class="col-sm-2 control-label">Country</label>
+ <div class="col-xs-4">
+ <select name="country" class="form-control">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select>
+</div>			
+</div>
+<div class="col-xs-4" class="form-group"><button name="btnadd" class="btn btn-primary btn-sm">Add</button> <button name="btnupdate" class="btn btn-primary disabled btn-sm">Update</button> <button name="btndelete" class="btn btn-primary disabled btn-sm">Delete</button></div>
+<br/><br/>
+
+<table class="table table-striped table-bordered">
+	<tr>
+	    <th></th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>DOB</th>
+		<th>Frequent Flyer #</th>
+		<th>Meals Type</th>
+		<th class="hidecls">City</th>
+		<th class="hidecls">State</th>
+		<th class="hidecls">Country</th>
+		<th>Delete</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="pid1"></td>
+		<td>Joe</td>
+		<td>Smith</td>
+		<td>10/10/1976</td>
+		<td>AJ880909</td>
+		<td>Veg</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#" class="btn btn-link">view/edit</a></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="pid2"></td>
+		<td>Clara</td>
+		<td>Jones</td>
+		<td>1/12/1997</td>
+		<td>BHSL890r893</td>
+		<td>Vegan</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#" class="btn btn-link">view/edit</a></td>
+	</tr>	
+	<tr>
+		<td><input type="checkbox" name="pid3"></td>
+		<td>Will</td>
+		<td>Black</td>
+		<td>2/2/1977</td>
+		<td>VKJS78979</td>
+		<td>Veg</td>
+		<td class="hidecls"><input type="text" name="city"></td>
+		<td class="hidecls"><input type="text" name="state"></td>
+		<td class="hidecls"><select name="country">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+			<option value="india">India</option>
+			</select></td>
+		<td><a name="editlink" href="#" class="btn btn-link">view/edit</a></td>
+	</tr>	
+</table>
+</div>
+ <script>
+$(document).ready(function(){
+    $('.btn-primary').tooltip({title: " Click "}); 
+    $('.btn-link').tooltip({title: " view/edit "});
+});
+</script>
+</body>
+</html>
