@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="angular_hw_1.js"></script>
+  
+	<style type="text/css">
+	.table{
+		  width: 50%;
+	}
+	
+	</style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+<form name="myform">
+    <div class="container-fluid">
+    	<h2>Passengers </h2>
+    	<table class="table table-bordered ">
+    	<tbody>
+    		<tr>
+    			<td>First Name</td>
+    			<td><input type="text" name="fn" id="fname1" ng-model="fnameng" placeholder="First Name" required>
+              <span ng-show="!fnameng">required</span></td>
+    		</tr>
+    		<tr>
+    			<td>Last Name</td>
+    			<td><input type="text" name="ln" id="lname1" ng-model="lnameng" placeholder="Last Name" required>
+              <span ng-show="!lnameng">required</span></td>
+    		</tr>
+    		<tr>
+    			<td>Date Of Birth</td>
+    			<td><input type="date" name="date" id="date1" ng-model="dateng " required>
+              <span ng-show="!dateng">required</span></td>
+    		</tr>
+    		<tr>
+    			<td>Meal Type</td>
+    			<td> <select id="mealtype" ng-model="mealng">
+               <option value="" selected>Select</option>
+			         <option value="Non-Veg">Non-Veg</option>
+					     <option value="Vegan">Vegan</option>
+					     <option value="Meat">Meat</option>
+					     <option value="Kosher">Kosher</option>
+					     </select></td>
+    		</tr>
+    		<tr>
+    			<td>Country</td>
+    			<td><select id="country" ng-model="countryng" ng-options="country for (country, states) in countries" >
+              <option value=''>Select</option>
+              </select></br></br>  </td>
+    		</tr>
+    		<tr>
+    			<td>State</td>
+    			<td><select id="state" ng-disabled="!countryng" ng-model="stateng" >
+              <option value=''>Select</option>
+              <option ng-repeat="stateng in countryng" value='{{stateng}}'>{{stateng}}</option>
+              </select></td><br>
+    		</tr>
+    		<tr>
+    			<td colspan="2">
+            <pre> <button type="button" class="btn btn-primary" ng-disabled="!fnameng" ng-click="addcol()">ADD</button> <button type="button" class="btn btn-primary" ng-click="removecol()">Delete</button> <button type="button" class="btn btn-primary" ng-click="updater()">Update</button></pre></td>
+    		</tr>
+    	</tbody>
+    	</table>
+    	<table class="table table-striped table-hover">
+    		<thead>
+      		<tr>
+      			<th></th>
+        		<th>Firstname</th>
+        		<th>Lastname</th>
+        		<th>Date Of Birth</th>
+        		<th>Meal Type</th>
+        		<th>Country</th>
+        		<th>State</th>
+      		</tr>
+      		</thead>
+      	<tr ng-repeat="col in cols">
+          <td><input type="checkbox" ng-model="selectedcols[$index]"></td>
+          <td>{{col.fname}}</td>
+          <td>{{col.lname}}</td>
+          <td>{{col.dateofbirth}}</td>
+          <td>{{col.mealtype}}</td>
+          <td>{{col.country}}</td>
+          <td>{{col.state}}</td>
+        </tr>
+      		
+    	</table>
+    </div>
+    </form>
+    </div>
+
+</body>
+</html>
